@@ -23,6 +23,7 @@
 		7B26833320C68D5600FE9A60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B26833820C68D5600FE9A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B26833920C68D5600FE9A60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B26834420C6996400FE9A60 /* LADefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LADefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 		7B26834320C6955A00FE9A60 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7B26834420C6996400FE9A60 /* LADefines.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
