@@ -1,0 +1,79 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - GTMBase64 (1.0.1)
+  - Masonry (1.1.0)
+  - MD5Digest (1.1.0)
+  - MJExtension (3.0.15)
+  - MJRefresh (3.1.15.3)
+  - "NSDate+Calendar (0.0.9)"
+  - "NSDate+Helper (1.0.4)"
+  - SDWebImage (4.4.0):
+    - SDWebImage/Core (= 4.4.0)
+  - SDWebImage/Core (4.4.0)
+  - Toast (4.0.0)
+  - "UIColor+Hex (1.0.1)":
+    - "UIColor+Hex/NSColor (= 1.0.1)"
+    - "UIColor+Hex/UIColor (= 1.0.1)"
+  - "UIColor+Hex/UIColor (1.0.1)"
+  - "UIView+FrameEx (0.0.1)"
+
+DEPENDENCIES:
+  - AFNetworking
+  - GTMBase64
+  - Masonry
+  - MD5Digest
+  - MJExtension
+  - MJRefresh
+  - "NSDate+Calendar"
+  - "NSDate+Helper"
+  - SDWebImage
+  - Toast
+  - "UIColor+Hex"
+  - "UIView+FrameEx"
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - GTMBase64
+    - Masonry
+    - MD5Digest
+    - MJExtension
+    - MJRefresh
+    - "NSDate+Calendar"
+    - "NSDate+Helper"
+    - SDWebImage
+    - Toast
+    - "UIColor+Hex"
+    - "UIView+FrameEx"
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MD5Digest: fea371215507cfcdc3c9633d02cffc7fd075ebc3
+  MJExtension: 3f039575db1b135a20699ad298713b26acec1528
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  "NSDate+Calendar": f377c72a2e66de8d603ae2dcca4dba9bbf13acbd
+  "NSDate+Helper": 78f517ac1c67914096433466fa7d20b812b9d86c
+  SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  "UIColor+Hex": 9fee91bb8e19f17dd40a79ae1e98949a6a84489d
+  "UIView+FrameEx": ab0c53e158ef0621d7b0b0a26626e175ac17e471
+
+PODFILE CHECKSUM: d180c2008184b868c6d0f3067889da4bd7c04a17
+
+COCOAPODS: 1.5.0

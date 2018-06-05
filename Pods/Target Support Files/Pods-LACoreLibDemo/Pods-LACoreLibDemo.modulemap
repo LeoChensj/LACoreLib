@@ -1,0 +1,6 @@
+framework module Pods_LACoreLibDemo {
+  umbrella header "Pods-LACoreLibDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
