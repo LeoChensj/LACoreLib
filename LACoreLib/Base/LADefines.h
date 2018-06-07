@@ -1,6 +1,6 @@
 //
 //  LADefines.h
-//  LACoreLibDemo
+//  LACoreLib
 //
 //  Created by Leo.Chen on 2018/6/5.
 //  Copyright © 2018年 Leo.Chen. All rights reserved.
@@ -10,6 +10,18 @@
 #define LADefines_h
 
 #import <Foundation/Foundation.h>
+
+#ifdef DEBUG
+    #define LALog(...)              NSLog(__VA_ARGS__)
+    #define LACoreLibWarn(...)      NSLog(@"LACoreLibWarn: " __VA_ARGS__)
+#else
+    #define LALog(...)
+    #define LACoreLibWarn(...)
+#endif
+
+
+
+#define LA_EXTERN                   extern
 
 #define LA_UNUSED_VAR(var)          ((void)(var))
 
@@ -31,6 +43,28 @@
 #define LA_IS_VALID_DELEGATE(d, s)  (d && [d respondsToSelector:s])
 
 #define LA_AS(obj, cls, var)        cls *var = nil; if (LA_IS(obj, cls)) var = (cls *)obj;
+
+
+#define LA_SINGLE_DEF \
++ (instancetype)sharedInstance;
+
+#define LA_SINGLE_IMP \
++ (instancetype)sharedInstance \
+{ \
+    static dispatch_once_t once; \
+    static id __singleton__; \
+    dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
+    return __singleton__; \
+}
+
+
+
+#define $(format, ...)              [NSString stringWithFormat:format, ##__VA_ARGS__]
+
+
+
+
+
 
 
 

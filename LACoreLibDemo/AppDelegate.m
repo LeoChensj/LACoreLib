@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "LACoreLib.h"
+
 
 @interface AppDelegate ()
 
@@ -16,7 +18,48 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //NSArray *array = @[@21, @2, @13, @25, @8];
+    
+    //NSLog(@"%@", [array la_subarrayWithRange:NSMakeRange(3, 4)]);
+    
+    /*
+    NSArray *res = [array la_filteredArrayWithBlock:^BOOL(NSUInteger idx, id obj) {
+        
+        if(idx == 2 && LA_IS_NUMBER(obj))
+        {
+            return NO;
+        }
+        
+        return YES;
+        
+    }];
+    NSLog(@"%@", res);
+    */
+    
+    /*
+    NSArray *res = [array la_mapArrayWithBlock:^id(NSUInteger idx, id obj) {
+        
+        LA_AS(obj, NSNumber, model);
+        
+        return @(model.integerValue+1);
+        
+    }];
+    LALog(@"%@", res);
+    */
+    
+    //LALog(@"%@", [array la_toJSON]);
+    
+    //LALog(@"%li", [array la_integerAtIndex:12 defaultValue:888]);
+    
+    LALog(@"%@", [NSBundle la_mainBundle_identifier]);
+    LALog(@"%@", [NSBundle la_mainBundle_version]);
+    LALog(@"%@", [NSBundle la_mainBundle_shortVersion]);
+    LALog(@"%@", [NSBundle la_mainBundle_name]);
+    LALog(@"%@", [NSBundle la_mainBundle_displayName]);
+    
+    
+    
     return YES;
 }
 
