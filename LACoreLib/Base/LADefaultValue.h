@@ -1,13 +1,13 @@
 //
 //  LADefaultValue.h
-//  LACoreLibDemo
+//  LACoreLib
 //
 //  Created by Leo.Chen on 2018/6/7.
 //  Copyright © 2018年 Leo.Chen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "LADefines.h"
+#import "LABaseDefines.h"
 
 
 LA_EXTERN BOOL LABool(id value, BOOL defaultValue);

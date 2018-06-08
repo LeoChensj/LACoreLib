@@ -9,9 +9,8 @@
 #ifndef LACoreLib_h
 #define LACoreLib_h
 
-#import "LADefines.h"
-#import "Foundation+LACoreLib.h"
-#import "LADefaultValue.h"
+#import "LABase.h"
+
 
 
 

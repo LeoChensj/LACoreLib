@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LADefines.h"
+#import "LABaseDefines.h"
 
 
 @interface NSObject (LACoreLib)

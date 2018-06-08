@@ -12,6 +12,8 @@
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
 		7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2683C020C8D99200FE9A60 /* Foundation+LACoreLib.m */; };
 		7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2683CD20C8DF4400FE9A60 /* LADefaultValue.m */; };
+		7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2683F220CA75FF00FE9A60 /* LAPathUtil.m */; };
+		7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2683F520CA799E00FE9A60 /* LABaseUtil.m */; };
 		99DD9F02E68DF2D601120C4E /* Pods_LACoreLibDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAC04CB8CFB35C47A610387 /* Pods_LACoreLibDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +41,16 @@
 		7B26833820C68D5600FE9A60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B26833920C68D5600FE9A60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7B2683BC20C8D99200FE9A60 /* LACoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LACoreLib.h; sourceTree = "<group>"; };
-		7B2683BE20C8D99200FE9A60 /* LADefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LADefines.h; sourceTree = "<group>"; };
 		7B2683BF20C8D99200FE9A60 /* Foundation+LACoreLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Foundation+LACoreLib.h"; sourceTree = "<group>"; };
 		7B2683C020C8D99200FE9A60 /* Foundation+LACoreLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+LACoreLib.m"; sourceTree = "<group>"; };
 		7B2683CC20C8DF4400FE9A60 /* LADefaultValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LADefaultValue.h; sourceTree = "<group>"; };
 		7B2683CD20C8DF4400FE9A60 /* LADefaultValue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LADefaultValue.m; sourceTree = "<group>"; };
+		7B2683F120CA75FF00FE9A60 /* LAPathUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAPathUtil.h; sourceTree = "<group>"; };
+		7B2683F220CA75FF00FE9A60 /* LAPathUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAPathUtil.m; sourceTree = "<group>"; };
+		7B2683F420CA799E00FE9A60 /* LABaseUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LABaseUtil.h; sourceTree = "<group>"; };
+		7B2683F520CA799E00FE9A60 /* LABaseUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LABaseUtil.m; sourceTree = "<group>"; };
+		7B2683F720CA7EB500FE9A60 /* LABase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LABase.h; sourceTree = "<group>"; };
+		7B2683F820CA7F2300FE9A60 /* LABaseDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LABaseDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +117,16 @@
 		7B2683BD20C8D99200FE9A60 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				7B2683BE20C8D99200FE9A60 /* LADefines.h */,
+				7B2683F720CA7EB500FE9A60 /* LABase.h */,
+				7B2683F820CA7F2300FE9A60 /* LABaseDefines.h */,
 				7B2683BF20C8D99200FE9A60 /* Foundation+LACoreLib.h */,
 				7B2683C020C8D99200FE9A60 /* Foundation+LACoreLib.m */,
 				7B2683CC20C8DF4400FE9A60 /* LADefaultValue.h */,
 				7B2683CD20C8DF4400FE9A60 /* LADefaultValue.m */,
+				7B2683F120CA75FF00FE9A60 /* LAPathUtil.h */,
+				7B2683F220CA75FF00FE9A60 /* LAPathUtil.m */,
+				7B2683F420CA799E00FE9A60 /* LABaseUtil.h */,
+				7B2683F520CA799E00FE9A60 /* LABaseUtil.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -261,7 +273,9 @@
 			files = (
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
+				7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */,
 				7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */,
+				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

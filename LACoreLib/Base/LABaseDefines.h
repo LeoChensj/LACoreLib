@@ -1,22 +1,22 @@
 //
-//  LADefines.h
+//  LABaseDefines.h
 //  LACoreLib
 //
-//  Created by Leo.Chen on 2018/6/5.
+//  Created by Leo.Chen on 2018/6/8.
 //  Copyright © 2018年 Leo.Chen. All rights reserved.
 //
 
-#ifndef LADefines_h
-#define LADefines_h
+#ifndef LABaseDefines_h
+#define LABaseDefines_h
 
 #import <Foundation/Foundation.h>
 
 #ifdef DEBUG
-    #define LALog(...)              NSLog(__VA_ARGS__)
-    #define LACoreLibWarn(...)      NSLog(@"LACoreLibWarn: " __VA_ARGS__)
+#define LALog(...)              NSLog(__VA_ARGS__)
+#define LACoreLibWarn(...)      NSLog(@"LACoreLibWarn: " __VA_ARGS__)
 #else
-    #define LALog(...)
-    #define LACoreLibWarn(...)
+#define LALog(...)
+#define LACoreLibWarn(...)
 #endif
 
 
@@ -51,10 +51,10 @@
 #define LA_SINGLE_IMP \
 + (instancetype)sharedInstance \
 { \
-    static dispatch_once_t once; \
-    static id __singleton__; \
-    dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
-    return __singleton__; \
+static dispatch_once_t once; \
+static id __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
+return __singleton__; \
 }
 
 
@@ -63,10 +63,4 @@
 
 
 
-
-
-
-
-
-
-#endif /* LADefines_h */
+#endif /* LABaseDefines_h */
