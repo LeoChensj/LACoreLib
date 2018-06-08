@@ -8,7 +8,6 @@
 
 #import "Foundation+LACoreLib.h"
 
-#import "LADefines.h"
 #import "LADefaultValue.h"
 
 
@@ -432,6 +431,337 @@
 @end
 
 
+
+
+
+
+
+
+NSString * const kLADateFormatFull = @"yyyy-MM-dd HH:mm:ss";
+NSString * const kLADateFormatDate = @"yyyy-MM-dd";
+NSString * const kLADateFormatDateChinese = @"yyyy年M月d日";
+NSString * const kLADateFormatDateShort = @"yy-MM-dd";
+NSString * const kLADateFormatDateShortChinese = @"yy年M月d日";
+NSString * const kLADateFormatMouthDay = @"MM-dd";
+NSString * const kLADateFormatMouthDayChinese = @"M月d日";
+NSString * const kLADateFormatTime = @"HH:mm:ss";
+NSString * const kLADateFormatTimeExtra = @"HH:mm:ss SSS";
+NSString * const kLADateFormatWeekNumber = @"c";
+NSString * const kLADateFormatWeekStringShort = @"ccc";
+NSString * const kLADateFormatWeekStringLong = @"cccc";
+
+
+@implementation NSDate (LACoreLib)
+
+- (NSInteger)la_year
+{
+    return [self la_dateComponentsDate].year;
+}
+
+- (NSInteger)la_month
+{
+    return [self la_dateComponentsDate].month;
+}
+
+- (NSInteger)la_day
+{
+    return [self la_dateComponentsDate].day;
+}
+
+- (NSInteger)la_weekday
+{
+    return [self la_dateComponentsWeekday].weekday;
+}
+
+- (NSInteger)la_hour
+{
+    return [self la_dateComponentsTime].hour;
+}
+
+- (NSInteger)la_minute
+{
+    return [self la_dateComponentsTime].minute;
+}
+
+- (NSInteger)la_second
+{
+    return [self la_dateComponentsTime].second;
+}
+
+
+
++ (NSDate *)la_dateWithYear:(NSUInteger)year
+                      month:(NSUInteger)month
+                        day:(NSUInteger)day
+{
+    NSDateComponents *components = [self dateComponentsWithYear:year
+                                                          month:month
+                                                            day:day
+                                                           hour:0
+                                                         minute:0
+                                                         second:0];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
++ (NSDate *)la_dateWithYear:(NSUInteger)year
+                      month:(NSUInteger)month
+                        day:(NSUInteger)day
+                       hour:(NSUInteger)hour
+                     minute:(NSUInteger)minute
+                     second:(NSUInteger)second
+{
+    NSDateComponents *components = [self dateComponentsWithYear:year
+                                                          month:month
+                                                            day:day
+                                                           hour:hour
+                                                         minute:minute
+                                                         second:second];
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
++ (NSDate *)la_dateFromDateFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = format;
+    
+    return [dateFormatter dateFromString:format];
+}
+
+- (BOOL)la_isEqualToDay:(NSDate *)date
+{
+    return self.la_day == date.la_day &&self.la_month == date.la_month && self.la_year == date.la_year;
+}
+
+- (BOOL)la_isEqualToTime:(NSDate *)date
+{
+    return self.la_hour == date.la_hour && self.la_minute == date.la_minute && self.la_second == date.la_second;
+}
+
+- (BOOL)la_isLessDate:(NSDate *)date
+{
+    return [self compare:date] == NSOrderedAscending;
+}
+
+- (BOOL)la_isGreaterDate:(NSDate *)date
+{
+    return [self compare:date] == NSOrderedDescending;
+}
+
+- (BOOL)la_isLessOrEqualToDate:(NSDate *)date
+{
+    return [self la_isLessDate:date] || [self isEqualToDate:date];
+}
+
+- (BOOL)la_isGreaterOrEqualToDate:(NSDate *)date
+{
+    return [self la_isGreaterDate:date] || [self isEqualToDate:date];
+}
+
+
+- (NSDate *)la_dateBySettingYear:(NSUInteger)year
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.year = year;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateByAddingYear:(NSUInteger)year
+{
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.year = year;
+    
+    return [[NSCalendar currentCalendar] dateByAddingComponents:components
+                                                         toDate:self
+                                                        options:0];
+}
+
+- (NSDate *)la_dateBySettingMonth:(NSUInteger)month
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.month = month;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateByAddingMonth:(NSUInteger)month
+{
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.month = month;
+    
+    return [[NSCalendar currentCalendar] dateByAddingComponents:components
+                                                         toDate:self
+                                                        options:0];
+}
+
+- (NSDate *)la_dateBySettingDay:(NSUInteger)day
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.day = day;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateByAddingDays:(NSUInteger)days
+{
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.day = days;
+    
+    return [[NSCalendar currentCalendar] dateByAddingComponents:components
+                                                         toDate:self
+                                                        options:0];
+}
+
+- (NSDate *)la_dateBySettingHour:(NSUInteger)hour
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.hour = hour;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateBySettingMinute:(NSUInteger)minute
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.minute = minute;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateBySettingSecond:(NSUInteger)second
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.second = second;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)dateBySettingHour:(NSUInteger)hour
+                       minute:(NSUInteger)minute
+                       second:(NSUInteger)second
+{
+    NSDateComponents *components = [self la_dateComponentsDateTime];
+    components.hour = hour;
+    components.minute = minute;
+    components.second = second;
+    
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+
+- (NSDate *)la_dateByAddingHour:(NSUInteger)hour
+{
+    return [self la_dateByAddingHour:hour minute:0 second:0];
+}
+
+- (NSDate *)la_dateByAddingMinute:(NSUInteger)minute
+{
+    return [self la_dateByAddingHour:0 minute:minute second:0];
+}
+
+- (NSDate *)la_dateByAddingSecond:(NSUInteger)second
+{
+    return [self la_dateByAddingHour:0 minute:0 second:second];
+}
+
+- (NSDate *)la_dateByAddingHour:(NSUInteger)hour
+                         minute:(NSUInteger)minute
+                         second:(NSUInteger)second
+{
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.hour = hour;
+    components.minute = minute;
+    components.second = second;
+    
+    return [[NSCalendar currentCalendar] dateByAddingComponents:components
+                                                         toDate:self
+                                                        options:0];
+}
+
+- (NSString *)la_stringFromDateFormat:(NSString *)format
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = format;
+    
+    return [dateFormatter stringFromDate:self];
+}
+
+
+
+
+
+
+
+
+
+
+#pragma mark - Private
++ (NSDateComponents *)dateComponentsWithYear:(NSUInteger)year
+                                       month:(NSUInteger)month
+                                         day:(NSUInteger)day
+                                        hour:(NSUInteger)hour
+                                      minute:(NSUInteger)minute
+                                      second:(NSUInteger)second
+{
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.year = year;
+    components.month = month;
+    components.day = day;
+    components.hour = hour;
+    components.minute = minute;
+    components.second = second;
+    
+    return components;
+}
+
+- (NSDateComponents *)la_dateComponents:(NSUInteger)components
+{
+    return [[NSCalendar currentCalendar] components:components fromDate:self];
+}
+
+- (NSDateComponents *)la_dateComponentsTime
+{
+    NSUInteger components = (NSCalendarUnitHour |
+                             NSCalendarUnitMinute |
+                             NSCalendarUnitSecond);
+    
+    return [self la_dateComponents:components];
+}
+
+- (NSDateComponents *)la_dateComponentsDate
+{
+    NSUInteger components = (NSCalendarUnitDay |
+                             NSCalendarUnitMonth |
+                             NSCalendarUnitYear);
+    
+    return [self la_dateComponents:components];
+}
+
+- (NSDateComponents *)la_dateComponentsWeekday
+{
+    NSUInteger components = (NSCalendarUnitDay |
+                             NSCalendarUnitWeekday |
+                             NSCalendarUnitWeekday |
+                             NSCalendarUnitMonth |
+                             NSCalendarUnitYear);
+    
+    return [self la_dateComponents:components];
+}
+
+- (NSDateComponents *)la_dateComponentsDateTime
+{
+    NSUInteger components = (NSCalendarUnitDay |
+                             NSCalendarUnitMonth |
+                             NSCalendarUnitYear |
+                             NSCalendarUnitHour |
+                             NSCalendarUnitMinute |
+                             NSCalendarUnitSecond);
+    
+    return [self la_dateComponents:components];
+}
+
+@end
 
 
 

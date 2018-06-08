@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LADefines.h"
+
 
 @interface NSObject (LACoreLib)
 
@@ -160,6 +162,92 @@
 + (NSString * _Nullable)la_mainBundle_shortVersion;
 + (NSString * _Nullable)la_mainBundle_name;
 + (NSString * _Nullable)la_mainBundle_displayName;
+
+@end
+
+
+
+
+
+
+
+
+LA_EXTERN NSString * const kLADateFormatFull;
+LA_EXTERN NSString * const kLADateFormatDate;
+LA_EXTERN NSString * const kLADateFormatDateChinese;
+LA_EXTERN NSString * const kLADateFormatDateShort;
+LA_EXTERN NSString * const kLADateFormatDateShortChinese;
+LA_EXTERN NSString * const kLADateFormatMouthDay;
+LA_EXTERN NSString * const kLADateFormatMouthDayChinese;
+LA_EXTERN NSString * const kLADateFormatTime;
+LA_EXTERN NSString * const kLADateFormatTimeExtra;
+LA_EXTERN NSString * const kLADateFormatWeekNumber;
+LA_EXTERN NSString * const kLADateFormatWeekStringShort;
+LA_EXTERN NSString * const kLADateFormatWeekStringLong;
+
+@interface NSDate (LACoreLib)
+
+@property (nonatomic, assign, readonly) NSInteger la_year;
+@property (nonatomic, assign, readonly) NSInteger la_month;
+@property (nonatomic, assign, readonly) NSInteger la_day;
+@property (nonatomic, assign, readonly) NSInteger la_weekday;
+@property (nonatomic, assign, readonly) NSInteger la_hour;
+@property (nonatomic, assign, readonly) NSInteger la_minute;
+@property (nonatomic, assign, readonly) NSInteger la_second;
+
+
+//create
++ (NSDate *)la_dateWithYear:(NSUInteger)year
+                   month:(NSUInteger)month
+                     day:(NSUInteger)day;
+
++ (NSDate *)la_dateWithYear:(NSUInteger)year
+                   month:(NSUInteger)month
+                     day:(NSUInteger)day
+                    hour:(NSUInteger)hour
+                  minute:(NSUInteger)minute
+                  second:(NSUInteger)second;
+
++ (NSDate *)la_dateFromDateFormat:(NSString *)format;
+
+
+
+//compare
+- (BOOL)la_isEqualToDay:(NSDate *)date;
+- (BOOL)la_isEqualToTime:(NSDate *)date;
+- (BOOL)la_isLessDate:(NSDate *)date;
+- (BOOL)la_isGreaterDate:(NSDate *)date;
+- (BOOL)la_isLessOrEqualToDate:(NSDate *)date;
+- (BOOL)la_isGreaterOrEqualToDate:(NSDate *)date;
+
+
+//set add
+- (NSDate *)la_dateBySettingYear:(NSUInteger)year;
+- (NSDate *)la_dateByAddingYear:(NSUInteger)year;
+
+- (NSDate *)la_dateBySettingMonth:(NSUInteger)month;
+- (NSDate *)la_dateByAddingMonth:(NSUInteger)month;
+
+- (NSDate *)la_dateBySettingDay:(NSUInteger)day;
+- (NSDate *)la_dateByAddingDays:(NSUInteger)days;
+
+- (NSDate *)la_dateBySettingHour:(NSUInteger)hour;
+- (NSDate *)la_dateBySettingMinute:(NSUInteger)minute;
+- (NSDate *)la_dateBySettingSecond:(NSUInteger)second;
+- (NSDate *)dateBySettingHour:(NSUInteger)hour
+                       minute:(NSUInteger)minute
+                       second:(NSUInteger)second;
+
+- (NSDate *)la_dateByAddingHour:(NSUInteger)hour;
+- (NSDate *)la_dateByAddingMinute:(NSUInteger)minute;
+- (NSDate *)la_dateByAddingSecond:(NSUInteger)second;
+- (NSDate *)la_dateByAddingHour:(NSUInteger)hour
+                      minute:(NSUInteger)minute
+                      second:(NSUInteger)second;
+
+
+//to string
+- (NSString *)la_stringFromDateFormat:(NSString *)format;
 
 @end
 

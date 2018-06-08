@@ -52,11 +52,15 @@
     
     //LALog(@"%li", [array la_integerAtIndex:12 defaultValue:888]);
     
-    LALog(@"%@", [NSBundle la_mainBundle_identifier]);
-    LALog(@"%@", [NSBundle la_mainBundle_version]);
-    LALog(@"%@", [NSBundle la_mainBundle_shortVersion]);
-    LALog(@"%@", [NSBundle la_mainBundle_name]);
-    LALog(@"%@", [NSBundle la_mainBundle_displayName]);
+//    LALog(@"%@", [NSBundle la_mainBundle_identifier]);
+//    LALog(@"%@", [NSBundle la_mainBundle_version]);
+//    LALog(@"%@", [NSBundle la_mainBundle_shortVersion]);
+//    LALog(@"%@", [NSBundle la_mainBundle_name]);
+//    LALog(@"%@", [NSBundle la_mainBundle_displayName]);
+    
+    NSDate *date = [NSDate date];
+    LALog(@"%@", [date la_stringFromDateFormat:kLADateFormatFull]);
+    
     
     
     
