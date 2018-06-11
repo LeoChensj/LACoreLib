@@ -67,9 +67,17 @@
     
     //NSRange range = [@"qw123yrtasd" rangeOfString:@""];
     
-    NSString *string = @"https://LeoChensj.com?id=123";
+    //NSString *string = @"https://LeoChensj.com?id=123";
     
-    NSLog(@"%@", [string la_encodingWithUTF8]);
+    //NSLog(@"%@", [string la_encodingWithUTF8]);
+    
+    //NSLog(@"%f", LA_StatusBarHeight);
+    
+//    UIScrollView *asd;
+//    [asd la_disableContentInsetAdjust];
+    
+    UITableView *qwe = [UITableView new];
+    [qwe la_disableContentInsetAdjust];
     
     
     return YES;
