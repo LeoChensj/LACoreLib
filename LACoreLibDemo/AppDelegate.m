@@ -58,10 +58,18 @@
 //    LALog(@"%@", [NSBundle la_mainBundle_name]);
 //    LALog(@"%@", [NSBundle la_mainBundle_displayName]);
     
-    NSDate *date = [NSDate date];
-    LALog(@"%@", [date la_stringFromDateFormat:kLADateFormatFull]);
+    //NSDate *date = [NSDate date];
+    //LALog(@"%@", [date la_stringFromDateFormat:kLADateFormatFull]);
     
+    //NSString *asd = [@"asdwqrergedaqwre" stringByReplacingOccurrencesOfString:@"asd" withString:@"123"];
     
+    //NSLog(@"asd=%@", asd);
+    
+    //NSRange range = [@"qw123yrtasd" rangeOfString:@""];
+    
+    NSString *string = @"https://LeoChensj.com?id=123";
+    
+    NSLog(@"%@", [string la_encodingWithUTF8]);
     
     
     return YES;

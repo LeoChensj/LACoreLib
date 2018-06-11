@@ -7,10 +7,48 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "LABaseDefines.h"
 
 
 @interface NSObject (LACoreLib)
+
+@end
+
+
+
+
+@interface NSString (LACoreLib)
+
+- (BOOL)la_isPhoneNumber;
+
+- (BOOL)la_isEmail;
+
+- (BOOL)la_isUrl;
+
+- (BOOL)la_isBeginsWith:(NSString *)string;
+
+- (BOOL)la_isEndsWith:(NSString *)string;
+
+- (BOOL)la_containsString:(NSString *)subString;
+
+- (NSString *)la_replaceString:(NSString *)olderString withString:(NSString *)newerString;
+
+- (NSString *)la_substringWithRange:(NSRange)range;
+
+- (NSString *)la_AppendingString:(NSString *)string;
+
+- (NSString *)la_removeSubString:(NSString *)subString;
+
+- (NSString *)la_removeWhiteSpaces;
+
+- (NSData *)la_convertToData;
+
+- (NSString*)la_encodingWithUTF8;
+
+- (CGSize)la_attrStrSizeWithFont:(UIFont *)font
+                         maxSize:(CGSize)maxSize
+                     lineSpacing:(CGFloat)lineSpacing;
 
 @end
 

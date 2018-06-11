@@ -109,12 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				7B2683BC20C8D99200FE9A60 /* LACoreLib.h */,
-				7B2683BD20C8D99200FE9A60 /* Base */,
+				7B2683BD20C8D99200FE9A60 /* LABase */,
+				7B2683F920CE49FE00FE9A60 /* LANetwork */,
 			);
 			path = LACoreLib;
 			sourceTree = "<group>";
 		};
-		7B2683BD20C8D99200FE9A60 /* Base */ = {
+		7B2683BD20C8D99200FE9A60 /* LABase */ = {
 			isa = PBXGroup;
 			children = (
 				7B2683F720CA7EB500FE9A60 /* LABase.h */,
@@ -128,7 +129,14 @@
 				7B2683F420CA799E00FE9A60 /* LABaseUtil.h */,
 				7B2683F520CA799E00FE9A60 /* LABaseUtil.m */,
 			);
-			path = Base;
+			path = LABase;
+			sourceTree = "<group>";
+		};
+		7B2683F920CE49FE00FE9A60 /* LANetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LANetwork;
 			sourceTree = "<group>";
 		};
 		F93BEBEB7B79E5546537B6BA /* Frameworks */ = {

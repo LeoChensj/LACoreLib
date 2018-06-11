@@ -17,6 +17,175 @@
 @end
 
 
+
+
+@implementation NSString (LACoreLib)
+
+- (BOOL)la_isPhoneNumber
+{
+    NSString *regex = @"^(13|15|17|18|14)\\d{9}$";
+    NSPredicate * pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [pred evaluateWithObject:self];
+}
+
+- (BOOL)la_isEmail
+{
+    NSString *regex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [pred evaluateWithObject:self];
+}
+
+- (BOOL)la_isUrl
+{
+    NSString *regex =@"[a-zA-z]+://[^\\s]*";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    
+    return [pred evaluateWithObject:self];
+}
+
+- (BOOL)la_isBeginsWith:(NSString *)string
+{
+    if(!string)
+    {
+        LACoreLibWarn(@"(la_isBeginsWith:) parameter is nil");
+        
+        return NO;
+    }
+    
+    return [self hasPrefix:string];
+}
+
+- (BOOL)la_isEndsWith:(NSString *)string
+{
+    if(!string)
+    {
+        LACoreLibWarn(@"(la_isEndsWith:) parameter is nil");
+        
+        return NO;
+    }
+    
+    return [self hasSuffix:string];
+}
+
+- (BOOL)la_containsString:(NSString *)subString
+{
+    if(!subString)
+    {
+        LACoreLibWarn(@"(la_containsString:) parameter is nil");
+        
+        return NO;
+    }
+    
+    return ([self rangeOfString:subString].location == NSNotFound) ? NO : YES;
+}
+
+- (NSString *)la_replaceString:(NSString *)olderString withString:(NSString *)newerString
+{
+    if(!olderString || !newerString)
+    {
+        LACoreLibWarn(@"(la_replaceString:withString:) parameter is nil");
+        
+        return [NSString stringWithString:self];
+    }
+    
+    return [self stringByReplacingOccurrencesOfString:olderString withString:newerString];
+}
+
+- (NSString *)la_substringWithRange:(NSRange)range
+{
+    NSUInteger start = range.location;
+    NSUInteger length = range.length;
+    
+    if(start >= self.length)
+    {
+        LACoreLibWarn(@"start(%lu) is out of string.length(%lu)", start, self.length);
+        
+        start = 0;
+        length = 0;
+    }
+    
+    if(start + length > self.length)
+    {
+        LACoreLibWarn(@"length(%lu) is too long from start(%lu) for string.length(%lu)",
+                      length, start, self.length);
+        
+        length = self.length - start;
+    }
+    
+    return [self substringWithRange:NSMakeRange(start, length)];
+}
+
+- (NSString *)la_AppendingString:(NSString *)string
+{
+    if(!string || string.length == 0)
+    {
+        return [NSString stringWithString:self];
+    }
+    
+    return [self stringByAppendingString:string];
+}
+
+- (NSString *)la_removeSubString:(NSString *)subString
+{
+    if(!subString)
+    {
+        return [NSString stringWithString:self];
+    }
+    
+    NSRange range = [self rangeOfString:subString];
+    
+    if(range.location != NSNotFound)
+    {
+        return [self stringByReplacingCharactersInRange:range withString:@""];
+    }
+    
+    return [NSString stringWithString:self];
+}
+
+- (NSString *)la_removeWhiteSpaces
+{
+    return [self stringByTrimmingCharactersInSet:
+            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSData *)la_convertToData
+{
+    return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString*)la_encodingWithUTF8
+{
+    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (CGSize)la_attrStrSizeWithFont:(UIFont *)font
+                         maxSize:(CGSize)maxSize
+                     lineSpacing:(CGFloat)lineSpacing
+{
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpacing];
+    NSDictionary *dict = @{NSFontAttributeName: font,
+                           NSParagraphStyleAttributeName: paragraphStyle};
+    
+    CGSize size = [self boundingRectWithSize:maxSize
+                                          options:NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+                                       attributes:dict
+                                          context:nil].size;
+    
+    return size;
+}
+
+
+
+
+@end
+
+
+
+
+
 @implementation NSArray (LACoreLib)
 
 - (NSArray *)la_subarrayWithRange:(NSRange)range
