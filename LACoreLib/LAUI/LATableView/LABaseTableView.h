@@ -91,27 +91,6 @@ typedef void(^LABaseTableViewFooterCustomEventBlock)(NSInteger type, id model, N
  */
 @property (nonatomic, strong)LABaseTableViewFooterModelConfigBlock blockFooterModelConfig;
 
-///*
-// 下拉刷新
-// */
-//@property (nonatomic, strong)LABaseTableViewRefreshBlock blockRefresh;
-//
-///*
-// 上拉加载更多
-// */
-//@property (nonatomic, strong)LABaseTableViewLoadmoreBlock blockLoadmore;
-//
-///*
-// 是否允许下拉刷新
-// 默认YES
-// */
-//@property (nonatomic, assign)BOOL canRefresh;
-//
-///*
-// 是否允许上拉加载更多
-// 默认YES
-// */
-//@property (nonatomic, assign)BOOL canLoadmore;
 
 
 

@@ -30,10 +30,11 @@
         if (@available(iOS 11.0, *))
         {
             self.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            
+            self.estimatedRowHeight = 0;
+            self.estimatedSectionHeaderHeight = 0;
+            self.estimatedSectionFooterHeight = 0;
         }
-        
-//        self.canRefresh = YES;
-//        self.canLoadmore = YES;
     }
     
     return self;
@@ -344,54 +345,6 @@
 
 
 #pragma mark - Setter
-/*
-- (void)setCanRefresh:(BOOL)canRefresh
-{
-    _canRefresh = canRefresh;
-    
-    if (canRefresh)
-    {
-        __weak typeof(self) weakSelf = self;
-        self.mj_header = [YNRefreshHeader headerWithRefreshingBlock:^{
-            
-            (weakSelf.canRefresh && weakSelf.blockRefresh) ? weakSelf.blockRefresh(weakSelf.mj_header) : nil;
-            
-        }];
-    }
-    else
-    {
-        self.mj_header = nil;
-    }
-}
-
-- (void)setCanLoadmore:(BOOL)canLoadmore
-{
-    _canLoadmore = canLoadmore;
-    
-    if(canLoadmore)
-    {
-        __weak typeof(self) weakSelf = self;
-        self.mj_footer = ({
-            
-            MJRefreshFooter *footer = [YNRefreshFooter ynRefreshFooter:^{
-                
-                (weakSelf.canLoadmore && weakSelf.blockLoadmore) ? weakSelf.blockLoadmore(weakSelf.mj_footer) : nil;
-                
-            }];
-            if ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
-            {
-                footer.height += 14;
-            }
-            [YNSharedUtil setStateTitlesForMJRefreshFooter:footer];
-            footer;
-        });
-    }
-    else
-    {
-        self.mj_footer = nil;
-    }
-}
-*/
 
 
 

@@ -23,6 +23,12 @@
 		7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26841820CE808200FE9A60 /* LABaseTableView.m */; };
 		7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26841B20CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m */; };
 		7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26841D20CE808300FE9A60 /* LABaseTableViewCell.m */; };
+		7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842420CF5B2D00FE9A60 /* LANavigationController.m */; };
+		7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842720CF5FD600FE9A60 /* LABaseViewController.m */; };
+		7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */; };
+		7B26842F20CFAC2000FE9A60 /* LANavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */; };
+		7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843420CFC69200FE9A60 /* LAErrorView.m */; };
+		7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */; };
 		99DD9F02E68DF2D601120C4E /* Pods_LACoreLibDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAC04CB8CFB35C47A610387 /* Pods_LACoreLibDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +87,19 @@
 		7B26841B20CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABaseTableViewHeaderFooterView.m; sourceTree = "<group>"; };
 		7B26841C20CE808300FE9A60 /* LATableHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATableHeightCache.h; sourceTree = "<group>"; };
 		7B26841D20CE808300FE9A60 /* LABaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LABaseTableViewCell.m; sourceTree = "<group>"; };
+		7B26842320CF5B2D00FE9A60 /* LANavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigationController.h; sourceTree = "<group>"; };
+		7B26842420CF5B2D00FE9A60 /* LANavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANavigationController.m; sourceTree = "<group>"; };
+		7B26842620CF5FD600FE9A60 /* LABaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LABaseViewController.h; sourceTree = "<group>"; };
+		7B26842720CF5FD600FE9A60 /* LABaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LABaseViewController.m; sourceTree = "<group>"; };
+		7B26842920CF6C0000FE9A60 /* LAController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAController.h; sourceTree = "<group>"; };
+		7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LALoadingView.h; sourceTree = "<group>"; };
+		7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LALoadingView.m; sourceTree = "<group>"; };
+		7B26842D20CFAC2000FE9A60 /* LANavigationBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigationBarButton.h; sourceTree = "<group>"; };
+		7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANavigationBarButton.m; sourceTree = "<group>"; };
+		7B26843320CFC69200FE9A60 /* LAErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAErrorView.h; sourceTree = "<group>"; };
+		7B26843420CFC69200FE9A60 /* LAErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAErrorView.m; sourceTree = "<group>"; };
+		7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LABaseViewController+LAHelper.h"; sourceTree = "<group>"; };
+		7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LABaseViewController+LAHelper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +161,7 @@
 				7B2683BD20C8D99200FE9A60 /* LABase */,
 				7B2683F920CE49FE00FE9A60 /* LANetwork */,
 				7B2683FB20CE4E1700FE9A60 /* LAUI */,
+				7B26842220CF5AD400FE9A60 /* LAController */,
 			);
 			path = LACoreLib;
 			sourceTree = "<group>";
@@ -180,6 +200,12 @@
 				7B26840220CE526100FE9A60 /* LASystemDevice.m */,
 				7B26840820CE633200FE9A60 /* UIKit+LACoreLib.h */,
 				7B26840920CE633200FE9A60 /* UIKit+LACoreLib.m */,
+				7B26842D20CFAC2000FE9A60 /* LANavigationBarButton.h */,
+				7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */,
+				7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */,
+				7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */,
+				7B26843320CFC69200FE9A60 /* LAErrorView.h */,
+				7B26843420CFC69200FE9A60 /* LAErrorView.m */,
 				7B26840B20CE74F700FE9A60 /* UITableView+LACoreLib */,
 				7B26841520CE802E00FE9A60 /* LATableView */,
 			);
@@ -212,6 +238,20 @@
 				7B26841620CE808200FE9A60 /* LATableHeightCache.m */,
 			);
 			path = LATableView;
+			sourceTree = "<group>";
+		};
+		7B26842220CF5AD400FE9A60 /* LAController */ = {
+			isa = PBXGroup;
+			children = (
+				7B26842920CF6C0000FE9A60 /* LAController.h */,
+				7B26842320CF5B2D00FE9A60 /* LANavigationController.h */,
+				7B26842420CF5B2D00FE9A60 /* LANavigationController.m */,
+				7B26842620CF5FD600FE9A60 /* LABaseViewController.h */,
+				7B26842720CF5FD600FE9A60 /* LABaseViewController.m */,
+				7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */,
+				7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */,
+			);
+			path = LAController;
 			sourceTree = "<group>";
 		};
 		F93BEBEB7B79E5546537B6BA /* Frameworks */ = {
@@ -356,19 +396,25 @@
 			files = (
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
+				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
+				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
+				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
+				7B26842F20CFAC2000FE9A60 /* LANavigationBarButton.m in Sources */,
 				7B26840A20CE633200FE9A60 /* UIKit+LACoreLib.m in Sources */,
 				7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */,
 				7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */,
 				7B26840320CE526100FE9A60 /* LASystemDevice.m in Sources */,
 				7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */,
 				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
+				7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */,
 				7B26841420CE7ABE00FE9A60 /* UITableViewCell+LACoreLib.m in Sources */,
 				7B26840E20CE756B00FE9A60 /* LATableViewCellItem.m in Sources */,
 				7B26841E20CE808300FE9A60 /* LATableHeightCache.m in Sources */,
 				7B26841120CE784D00FE9A60 /* LATableViewCellContext.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
+				7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

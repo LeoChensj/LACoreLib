@@ -257,7 +257,7 @@
 
 - (id)la_objectAtIndex:(NSUInteger)index
 {
-    if(index < self.count)
+    if(index > 0 && index < self.count)
     {
         return [self objectAtIndex:index];
     }
