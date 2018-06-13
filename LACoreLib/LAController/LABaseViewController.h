@@ -39,14 +39,14 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
  默认传递的参数
  表示Push过来的那个控制器，即上一个控制器
  */
-@property (nonatomic, readonly) UIViewController *previousController;
+@property (nonatomic, strong, readonly) UIViewController *previousController;
 
 /*
  上一个控制器传过来的参数，非必传
  表示此控制提交成功后返回到哪一个控制器
  即调用onSuccessBack返回的控制器
  */
-@property (nonatomic, readonly) UIViewController *onSusseccPopToController;
+@property (nonatomic, strong, readonly) UIViewController *onSusseccPopToController;
 
 
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0020D11DDB002CF340 /* LATabBarController.m */; };
+		7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0320D11E25002CF340 /* LATabBarItem.m */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
@@ -49,6 +51,10 @@
 		2FAC04CB8CFB35C47A610387 /* Pods_LACoreLibDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LACoreLibDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F6670D945795C62475C0D9 /* Pods-LACoreLibDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LACoreLibDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LACoreLibDemo/Pods-LACoreLibDemo.release.xcconfig"; sourceTree = "<group>"; };
 		787892AA6BC29F84EFEAB404 /* Pods-LACoreLibDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LACoreLibDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LACoreLibDemo/Pods-LACoreLibDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7B0F39FF20D11DDB002CF340 /* LATabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBarController.h; sourceTree = "<group>"; };
+		7B0F3A0020D11DDB002CF340 /* LATabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarController.m; sourceTree = "<group>"; };
+		7B0F3A0220D11E25002CF340 /* LATabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBarItem.h; sourceTree = "<group>"; };
+		7B0F3A0320D11E25002CF340 /* LATabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarItem.m; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26832A20C68D5200FE9A60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B26832B20C68D5200FE9A60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 				7B26840920CE633200FE9A60 /* UIKit+LACoreLib.m */,
 				7B26842D20CFAC2000FE9A60 /* LANavigationBarButton.h */,
 				7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */,
+				7B0F3A0220D11E25002CF340 /* LATabBarItem.h */,
+				7B0F3A0320D11E25002CF340 /* LATabBarItem.m */,
 				7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */,
 				7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */,
 				7B26843320CFC69200FE9A60 /* LAErrorView.h */,
@@ -246,6 +254,8 @@
 				7B26842920CF6C0000FE9A60 /* LAController.h */,
 				7B26842320CF5B2D00FE9A60 /* LANavigationController.h */,
 				7B26842420CF5B2D00FE9A60 /* LANavigationController.m */,
+				7B0F39FF20D11DDB002CF340 /* LATabBarController.h */,
+				7B0F3A0020D11DDB002CF340 /* LATabBarController.m */,
 				7B26842620CF5FD600FE9A60 /* LABaseViewController.h */,
 				7B26842720CF5FD600FE9A60 /* LABaseViewController.m */,
 				7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */,
@@ -386,6 +396,7 @@
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
 				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
+				7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
 				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
 				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
@@ -402,6 +413,7 @@
 				7B26841E20CE808300FE9A60 /* LATableHeightCache.m in Sources */,
 				7B26841120CE784D00FE9A60 /* LATableViewCellContext.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
+				7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */,
 				7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,7 +542,10 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = LACoreLibDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LeoChen.LACoreLibDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -548,7 +563,10 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = LACoreLibDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LeoChen.LACoreLibDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
