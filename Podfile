@@ -12,15 +12,6 @@ target ‘LACoreLibDemo’ do
     pod 'MJExtension'
     pod 'MJRefresh'
     
-    pod 'GTMBase64'
-    pod 'MD5Digest'
-    
-    pod 'UIView+FrameEx'
-    pod 'UIColor+Hex'
-    
-    pod 'NSDate+Calendar'
-    pod 'NSDate+Helper'
-    
     pod 'Toast'
     
 end

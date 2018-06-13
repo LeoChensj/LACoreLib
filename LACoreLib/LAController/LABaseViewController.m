@@ -45,23 +45,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     
     [self configNavigationBar];
     
-    
-    
-    
-    
-    
-    if (@available(iOS 11.0, *))
-    {
-        self.contentInsets = self.view.safeAreaInsets;
-    }
-    else
-    {
-        self.contentInsets = UIEdgeInsetsMake(self.contentTopInset,
-                                              self.contentLeftInset,
-                                              self.contentBottomInset,
-                                              self.contentRightInset);
-    }
-    [self.view setNeedsLayout];
+    [self configLayout];
 }
 
 
@@ -164,6 +148,22 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 
 #pragma mark - Layout
+- (void)configLayout
+{
+    if (@available(iOS 11.0, *))
+    {
+        self.contentInsets = self.view.safeAreaInsets;
+    }
+    else
+    {
+        self.contentInsets = UIEdgeInsetsMake(self.contentTopInset,
+                                              self.contentLeftInset,
+                                              self.contentBottomInset,
+                                              self.contentRightInset);
+    }
+    [self.view setNeedsLayout];
+}
+
 - (CGFloat)contentTopInset
 {
     if(self.navigationController)
