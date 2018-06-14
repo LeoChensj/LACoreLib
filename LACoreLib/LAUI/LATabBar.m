@@ -7,11 +7,13 @@
 //
 
 #import "LATabBar.h"
+#import "LABase.h"
 #import "LAUIDefines.h"
 
 @interface LATabBar ()
 
 @property (nonatomic, strong)NSArray <LATabBarItem *>*la_items;
+@property (nonatomic, strong)UIView *topLine;
 
 @end
 
@@ -20,8 +22,10 @@
 @implementation LATabBar
 
 - (instancetype)initWithItems:(NSArray <LATabBarItem *>*)items
+                      topLine:(UIView *)topLine;
 {
-    if(self = [super initWithFrame:CGRectMake(0, LA_SCREEN_HEIGHT - LA_TabBarHeight, LA_SCREEN_WIDTH, LA_TabBarHeight)])
+//    if(self = [super initWithFrame:CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_TabBarHeight)])
+    if(self = [super init])
     {
         if(items.count < 2 || items.count > 5)
         {
@@ -48,6 +52,14 @@
                 item.tag = i;
                 [item addTarget:self action:@selector(onSelected:) forControlEvents:UIControlEventTouchUpInside];
                 [item addTarget:self action:@selector(onSelectedRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
+            }
+            
+            if(topLine)
+            {
+                self.topLine = topLine;
+                
+                topLine.frame = CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_LineMinHeight);
+                [self addSubview:topLine];
             }
         }
     }
@@ -87,6 +99,18 @@
     }
 }
 
+- (void)layoutSubviews
+{
+    [self.la_items la_mapArrayWithBlock:^id(NSUInteger idx, LATabBarItem *obj) {
+        
+        [self bringSubviewToFront:obj];
+        
+        return nil;
+        
+    }];
+    
+    [self bringSubviewToFront:self.topLine];
+}
 
 
 #pragma mark - Event

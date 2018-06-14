@@ -19,6 +19,7 @@ typedef void(^LATabBarSelectBlock)(NSUInteger selectIndex);
 @property (nonatomic, strong)LATabBarSelectBlock blockSelectRepeat;
 
 
-- (instancetype)initWithItems:(NSArray <LATabBarItem *>*)items;
+- (instancetype)initWithItems:(NSArray <LATabBarItem *>*)items
+                      topLine:(UIView *)topLine;
 
 @end

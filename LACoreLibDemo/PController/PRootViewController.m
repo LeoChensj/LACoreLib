@@ -58,13 +58,11 @@
     
     
     
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] init];
-    effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-    
     UIView *line = [[UIView alloc] init];
     line.backgroundColor = [UIColor colorWithCSS:@"#cccccc"];
     
-    LATabBar *tabBar = [[LATabBar alloc] initWithItems:@[item1, item2, item3, item4]];
+    LATabBar *tabBar = [[LATabBar alloc] initWithItems:@[item1, item2, item3, item4]
+                                               topLine:line];
     
     
     
