@@ -7,31 +7,69 @@
 //
 
 #import "LATabBarController.h"
+#import "LANavigationController.h"
+#import "LABase.h"
+#import "LAUI.h"
+
 
 @interface LATabBarController ()
+
+@property (nonatomic, strong)LATabBar *la_tabBar;
 
 @end
 
 @implementation LATabBarController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    
+    self.la_tabBar = [self la_configTabBar];
+    [self setValue:self.la_tabBar forKey:@"tabBar"];
+    
+    __weak typeof(self) weakSelf = self;
+    self.la_tabBar.blockSelect = ^(NSUInteger selectIndex) {
+        
+        weakSelf.selectedIndex = selectIndex;
+        
+    };
+    
+    
+    
+    self.viewControllers = [[self la_configViewControllers] la_mapArrayWithBlock:^id(NSUInteger idx, UIViewController *obj) {
+        
+        obj.hidesBottomBarWhenPushed = NO;
+        return [[LANavigationController alloc] initWithRootViewController:obj];
+        
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    self.tabBar.hidden = NO;
+}
+
+
+
+- (LATabBar *)la_configTabBar
+{
+    return nil;
+}
+
+- (NSArray<UIViewController *> *)la_configViewControllers
+{
+    return nil;
+}
+
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

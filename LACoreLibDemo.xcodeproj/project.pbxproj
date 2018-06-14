@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0020D11DDB002CF340 /* LATabBarController.m */; };
 		7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0320D11E25002CF340 /* LATabBarItem.m */; };
+		7B0F3A0720D20C06002CF340 /* LATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0620D20C06002CF340 /* LATabBar.m */; };
+		7B0F3A0B20D23ABD002CF340 /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */; };
+		7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0D20D23B01002CF340 /* PBaseViewController.m */; };
+		7B0F3A2420D23C3C002CF340 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A1D20D23C3C002CF340 /* ViewController2.m */; };
+		7B0F3A2520D23C3C002CF340 /* ViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A1E20D23C3C002CF340 /* ViewController3.m */; };
+		7B0F3A2620D23C3C002CF340 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2120D23C3C002CF340 /* ViewController1.m */; };
+		7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2220D23C3C002CF340 /* ViewController4.m */; };
+		7B0F3A2C20D26132002CF340 /* TestViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2B20D26132002CF340 /* TestViewController1.m */; };
+		7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
@@ -55,6 +64,24 @@
 		7B0F3A0020D11DDB002CF340 /* LATabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarController.m; sourceTree = "<group>"; };
 		7B0F3A0220D11E25002CF340 /* LATabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBarItem.h; sourceTree = "<group>"; };
 		7B0F3A0320D11E25002CF340 /* LATabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarItem.m; sourceTree = "<group>"; };
+		7B0F3A0520D20C06002CF340 /* LATabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBar.h; sourceTree = "<group>"; };
+		7B0F3A0620D20C06002CF340 /* LATabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBar.m; sourceTree = "<group>"; };
+		7B0F3A0920D23ABD002CF340 /* PRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRootViewController.h; sourceTree = "<group>"; };
+		7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
+		7B0F3A0C20D23B01002CF340 /* PBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBaseViewController.h; sourceTree = "<group>"; };
+		7B0F3A0D20D23B01002CF340 /* PBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBaseViewController.m; sourceTree = "<group>"; };
+		7B0F3A1C20D23C3C002CF340 /* ViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController3.h; sourceTree = "<group>"; };
+		7B0F3A1D20D23C3C002CF340 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		7B0F3A1E20D23C3C002CF340 /* ViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController3.m; sourceTree = "<group>"; };
+		7B0F3A1F20D23C3C002CF340 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		7B0F3A2020D23C3C002CF340 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		7B0F3A2120D23C3C002CF340 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		7B0F3A2220D23C3C002CF340 /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
+		7B0F3A2320D23C3C002CF340 /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
+		7B0F3A2A20D26132002CF340 /* TestViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController1.h; sourceTree = "<group>"; };
+		7B0F3A2B20D26132002CF340 /* TestViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
+		7B0F3A2D20D26CA1002CF340 /* TestViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController2.h; sourceTree = "<group>"; };
+		7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController2.m; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26832A20C68D5200FE9A60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B26832B20C68D5200FE9A60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +156,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7B0F3A0820D23A91002CF340 /* PController */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F3A0920D23ABD002CF340 /* PRootViewController.h */,
+				7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */,
+				7B0F3A0C20D23B01002CF340 /* PBaseViewController.h */,
+				7B0F3A0D20D23B01002CF340 /* PBaseViewController.m */,
+			);
+			path = PController;
+			sourceTree = "<group>";
+		};
+		7B0F3A1B20D23C0F002CF340 /* MyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F3A1F20D23C3C002CF340 /* ViewController1.h */,
+				7B0F3A2120D23C3C002CF340 /* ViewController1.m */,
+				7B0F3A2020D23C3C002CF340 /* ViewController2.h */,
+				7B0F3A1D20D23C3C002CF340 /* ViewController2.m */,
+				7B0F3A1C20D23C3C002CF340 /* ViewController3.h */,
+				7B0F3A1E20D23C3C002CF340 /* ViewController3.m */,
+				7B0F3A2320D23C3C002CF340 /* ViewController4.h */,
+				7B0F3A2220D23C3C002CF340 /* ViewController4.m */,
+				7B0F3A2A20D26132002CF340 /* TestViewController1.h */,
+				7B0F3A2B20D26132002CF340 /* TestViewController1.m */,
+				7B0F3A2D20D26CA1002CF340 /* TestViewController2.h */,
+				7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */,
+			);
+			path = MyViewController;
+			sourceTree = "<group>";
+		};
+		7B0F3A2920D23C5A002CF340 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
 		7B26831E20C68D5200FE9A60 = {
 			isa = PBXGroup;
 			children = (
@@ -151,11 +215,14 @@
 		7B26832920C68D5200FE9A60 /* LACoreLibDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7B0F3A0820D23A91002CF340 /* PController */,
+				7B0F3A1B20D23C0F002CF340 /* MyViewController */,
 				7B26832A20C68D5200FE9A60 /* AppDelegate.h */,
 				7B26832B20C68D5200FE9A60 /* AppDelegate.m */,
 				7B26833320C68D5600FE9A60 /* Assets.xcassets */,
 				7B26833820C68D5600FE9A60 /* Info.plist */,
 				7B26833920C68D5600FE9A60 /* main.m */,
+				7B0F3A2920D23C5A002CF340 /* Res */,
 			);
 			path = LACoreLibDemo;
 			sourceTree = "<group>";
@@ -210,6 +277,8 @@
 				7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */,
 				7B0F3A0220D11E25002CF340 /* LATabBarItem.h */,
 				7B0F3A0320D11E25002CF340 /* LATabBarItem.m */,
+				7B0F3A0520D20C06002CF340 /* LATabBar.h */,
+				7B0F3A0620D20C06002CF340 /* LATabBar.m */,
 				7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */,
 				7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */,
 				7B26843320CFC69200FE9A60 /* LAErrorView.h */,
@@ -393,19 +462,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
+				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
+				7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */,
 				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
+				7B0F3A2620D23C3C002CF340 /* ViewController1.m in Sources */,
 				7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */,
+				7B0F3A2520D23C3C002CF340 /* ViewController3.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
 				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
 				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
+				7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */,
+				7B0F3A2C20D26132002CF340 /* TestViewController1.m in Sources */,
 				7B26842F20CFAC2000FE9A60 /* LANavigationBarButton.m in Sources */,
 				7B26840A20CE633200FE9A60 /* UIKit+LACoreLib.m in Sources */,
 				7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */,
 				7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */,
 				7B26840320CE526100FE9A60 /* LASystemDevice.m in Sources */,
+				7B0F3A2420D23C3C002CF340 /* ViewController2.m in Sources */,
 				7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */,
+				7B0F3A0720D20C06002CF340 /* LATabBar.m in Sources */,
 				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
 				7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */,
 				7B26841420CE7ABE00FE9A60 /* UITableViewCell+LACoreLib.m in Sources */,
@@ -413,6 +490,7 @@
 				7B26841E20CE808300FE9A60 /* LATableHeightCache.m in Sources */,
 				7B26841120CE784D00FE9A60 /* LATableViewCellContext.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
+				7B0F3A0B20D23ABD002CF340 /* PRootViewController.m in Sources */,
 				7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */,
 				7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */,
 			);

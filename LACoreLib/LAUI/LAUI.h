@@ -16,6 +16,7 @@
 #import "LABaseTableView.h"
 
 #import "LANavigationBarButton.h"
+#import "LATabBarItem.h"
 #import "LALoadingView.h"
 #import "LAErrorView.h"
 

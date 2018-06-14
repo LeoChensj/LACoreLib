@@ -19,8 +19,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 @interface LABaseViewController ()
 
-@property(nonatomic, strong) LANavigationBarButton *btnBack;
-@property(nonatomic, strong) LANavigationBarButton *btnAction;
+
 
 @end
 
@@ -44,6 +43,8 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self configNavigationBar];
+    
+    [self configPopGestureRecognizer];
     
     [self configLayout];
 }
@@ -143,6 +144,27 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 }
 
 
+#pragma mark - PopGestureRecognizer
+- (void)configPopGestureRecognizer
+{
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
+
+/*
+ 子类重写此方法可控制是否可以左滑pop
+ */
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer == self.navigationController.interactivePopGestureRecognizer)
+    {
+        return ([self.navigationController.viewControllers firstObject] != self);
+    }
+    
+    return YES;
+}
+
+
 
 
 
@@ -220,9 +242,9 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 
 #pragma mark - 加载动画
-- (Class)configLoadingView;
+- (LALoadingView *)configLoadingView
 {
-    return [LALoadingView class];
+    return nil;
 }
 
 
@@ -230,9 +252,9 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 
 #pragma mark - ErrorView
-- (Class)configErrorView
+- (LAErrorView *)configErrorView;
 {
-    return [LAErrorView class];
+    return nil;
 }
 
 - (void)onNetworkErrorViewReload

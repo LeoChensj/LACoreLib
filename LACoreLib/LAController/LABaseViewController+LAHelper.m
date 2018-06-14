@@ -55,7 +55,7 @@
 {
     if(!self.loadingView)
     {
-        self.loadingView = [[[self configLoadingView] alloc] init];
+        self.loadingView = [self configLoadingView];
         [self.view addSubview:self.loadingView];
     }
     
@@ -75,7 +75,7 @@
 {
     if (self.networkErrorView == nil)
     {
-        self.networkErrorView = [[[self configErrorView] alloc] init];
+        self.networkErrorView = [self configErrorView];
         [self.networkErrorView addTarget:self
                                   action:@selector(onNetworkErrorViewReload)
                         forControlEvents:UIControlEventTouchUpInside];
@@ -105,7 +105,7 @@
 {
     if (self.noDataErrorView == nil)
     {
-        self.noDataErrorView = [[[self configErrorView] alloc] init];
+        self.noDataErrorView = [self configErrorView];
         [self.noDataErrorView addTarget:self
                                  action:@selector(onNoDataErrorViewReload)
                        forControlEvents:UIControlEventTouchUpInside];

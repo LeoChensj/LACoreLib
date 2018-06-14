@@ -13,7 +13,7 @@
 
 #ifdef DEBUG
 #define LALog(...)              NSLog(__VA_ARGS__)
-#define LACoreLibWarn(...)      NSLog(@"LACoreLibWarn: " __VA_ARGS__)
+#define LACoreLibWarn(...)      NSLog(@"LACoreLibWarn:" __VA_ARGS__)
 #else
 #define LALog(...)
 #define LACoreLibWarn(...)

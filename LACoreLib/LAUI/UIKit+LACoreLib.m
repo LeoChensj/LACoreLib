@@ -134,7 +134,7 @@
 
 
 
-@implementation UIView (LACoreLib_Hex)
+@implementation UIColor (LACoreLib_Hex)
 
 + (UIColor *)colorWithCSS:(NSString *)css
 {

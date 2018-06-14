@@ -12,7 +12,7 @@
 
 @property (nonatomic, assign)BOOL isSelect;
 @property (nonatomic, assign)BOOL isNotice;
-@property (nonatomic, assign)NSInteger badgeNumber;
+@property (nonatomic, assign)NSUInteger badgeNumber;
 
 
 - (instancetype)initWithNormalImage:(UIImage *)normalImage

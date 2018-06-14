@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LACoreLib.h"
+#import "PRootViewController.h"
 
 
 @interface AppDelegate ()
@@ -75,9 +76,12 @@
     
 //    UIScrollView *asd;
 //    [asd la_disableContentInsetAdjust];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     
-    UITableView *qwe = [UITableView new];
-    [qwe la_disableContentInsetAdjust];
+    self.window.rootViewController = [[PRootViewController alloc] init];
     
     
     return YES;

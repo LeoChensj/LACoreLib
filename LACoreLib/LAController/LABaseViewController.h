@@ -17,10 +17,13 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 
 
 
-@interface LABaseViewController : UIViewController
+@interface LABaseViewController : UIViewController <UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
 
 #pragma mark - View
+@property(nonatomic, strong, readonly) LANavigationBarButton *btnBack;
+@property(nonatomic, strong, readonly) LANavigationBarButton *btnAction;
+
 @property (nonatomic, strong) LALoadingView *loadingView;
 @property (nonatomic, strong) LAErrorView *networkErrorView;
 @property (nonatomic, strong) LAErrorView *noDataErrorView;
@@ -97,8 +100,7 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 /*
  子类重写该方法，返回LALoadingView子类，在LALoadingView子类中自定义加载动画
  */
-- (Class)configLoadingView;
-
+- (LALoadingView *)configLoadingView;
 
 
 
@@ -107,7 +109,7 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 /*
  子类重写该方法，返回LAErrorView子类，在LAErrorView子类中自定义
  */
-- (Class)configErrorView;
+- (LAErrorView *)configErrorView;
 
 /*
  网络错误视图显示后，触发重新加载的回调
@@ -123,8 +125,6 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
  没有数据视图显示后，触发重新加载的回调
  */
 - (void)onNoDataErrorViewReload;
-
-
 
 
 
