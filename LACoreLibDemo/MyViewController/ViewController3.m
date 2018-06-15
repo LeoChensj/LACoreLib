@@ -7,6 +7,7 @@
 //
 
 #import "ViewController3.h"
+#import "TestViewController2.h"
 
 @interface ViewController3 ()
 
@@ -20,6 +21,16 @@
     
     self.navigationItem.title = @"发现";
 }
+
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    //TestViewController2 *vc = [TestViewController2 new];
+    
+    //[self.navigationController pushViewController:vc animated:YES];
+    //[self presentViewController:vc animated:YES completion:nil];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

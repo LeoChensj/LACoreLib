@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LATabBar.h"
+#import "LANavigationController.h"
 
 
 @interface LATabBarController : UITabBarController
@@ -23,5 +24,10 @@
  已为你自动加上NavigationController
  */
 - (NSArray <UIViewController *>*)la_configViewControllers;
+
+/*
+ 配置NavigationController
+ */
+- (LANavigationController *)la_configNavigationController;
 
 @end

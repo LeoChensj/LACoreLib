@@ -10,6 +10,8 @@
 
 @interface TestViewController1 ()
 
+@property (nonatomic, assign)BOOL statusBarStyleFlag;
+
 @end
 
 @implementation TestViewController1
@@ -19,6 +21,21 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"test1";
+    
+    self.statusBarStyleFlag = NO;
+}
+
+- (UIStatusBarStyle)configStatusBarStyle
+{
+    return (self.statusBarStyleFlag
+            ? UIStatusBarStyleDefault
+            : UIStatusBarStyleLightContent);
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    self.statusBarStyleFlag = !self.statusBarStyleFlag;
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)didReceiveMemoryWarning

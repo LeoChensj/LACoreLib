@@ -55,7 +55,6 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 
 
 #pragma mark - Navigation
-
 /*
  配置导航栏title颜色
  */
@@ -75,6 +74,21 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
  配置导航栏按钮，根据需要重写
  */
 - (void)configNavigationBarButtons;
+
+/*
+ 是否允许左滑pop控制器
+ 子类重写控制
+ */
+- (BOOL)configEnablePopGestureRecognizer;
+
+
+
+
+#pragma mark - StatusBarStyle
+/*
+ 配置状态栏颜色
+ */
+- (UIStatusBarStyle)configStatusBarStyle;
 
 
 

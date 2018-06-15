@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LANavigationBar.h"
 
 
 @interface LANavigationController : UINavigationController
+
+/*
+ 配置navigationBar
+ 可以继承自LANavigationBar自定义
+ */
+- (LANavigationBar *)la_configNavigationBar;
 
 @end

@@ -24,8 +24,18 @@
     self.navigationItem.title = @"Chen";
 }
 
+- (UIColor *)configColorForTitle
+{
+    return [UIColor redColor];
+}
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (UIFont *)configFontForTitle
+{
+    return [UIFont systemFontOfSize:18];
+}
+
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     TestViewController2 *vc = [TestViewController2 new];
     

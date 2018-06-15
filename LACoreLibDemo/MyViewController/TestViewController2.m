@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController2.h"
+#import "TestViewController1.h"
 
 @interface TestViewController2 ()
 
@@ -24,9 +25,16 @@
 
 
 //禁止左滑pop
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+- (BOOL)configEnablePopGestureRecognizer
 {
     return NO;
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    TestViewController1 *vc = [TestViewController1 new];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
@@ -34,15 +42,5 @@
 {
     [super didReceiveMemoryWarning];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

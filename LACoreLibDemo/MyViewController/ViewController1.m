@@ -25,7 +25,7 @@
     self.navigationItem.title = @"Leo";
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     TestViewController1 *vc = [TestViewController1 new];
     

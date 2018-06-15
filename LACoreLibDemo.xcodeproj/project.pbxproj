@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0020D11DDB002CF340 /* LATabBarController.m */; };
-		7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0320D11E25002CF340 /* LATabBarItem.m */; };
-		7B0F3A0720D20C06002CF340 /* LATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0620D20C06002CF340 /* LATabBar.m */; };
 		7B0F3A0B20D23ABD002CF340 /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */; };
 		7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A0D20D23B01002CF340 /* PBaseViewController.m */; };
 		7B0F3A2420D23C3C002CF340 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A1D20D23C3C002CF340 /* ViewController2.m */; };
@@ -18,6 +16,11 @@
 		7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2220D23C3C002CF340 /* ViewController4.m */; };
 		7B0F3A2C20D26132002CF340 /* TestViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2B20D26132002CF340 /* TestViewController1.m */; };
 		7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */; };
+		7B0F3A3320D362A9002CF340 /* LANavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3220D362A9002CF340 /* LANavigationBarButton.m */; };
+		7B0F3A3920D362E8002CF340 /* LATabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3620D362E8002CF340 /* LATabBar.m */; };
+		7B0F3A3A20D362E8002CF340 /* LATabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3720D362E8002CF340 /* LATabBarItem.m */; };
+		7B0F3A3D20D36359002CF340 /* LANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3C20D36359002CF340 /* LANavigationBar.m */; };
+		7B0F3A4020D39702002CF340 /* PNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3F20D39702002CF340 /* PNavigationController.m */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
@@ -37,7 +40,6 @@
 		7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842420CF5B2D00FE9A60 /* LANavigationController.m */; };
 		7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842720CF5FD600FE9A60 /* LABaseViewController.m */; };
 		7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */; };
-		7B26842F20CFAC2000FE9A60 /* LANavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */; };
 		7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843420CFC69200FE9A60 /* LAErrorView.m */; };
 		7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */; };
 		99DD9F02E68DF2D601120C4E /* Pods_LACoreLibDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAC04CB8CFB35C47A610387 /* Pods_LACoreLibDemo.framework */; };
@@ -62,10 +64,6 @@
 		787892AA6BC29F84EFEAB404 /* Pods-LACoreLibDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LACoreLibDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LACoreLibDemo/Pods-LACoreLibDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7B0F39FF20D11DDB002CF340 /* LATabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBarController.h; sourceTree = "<group>"; };
 		7B0F3A0020D11DDB002CF340 /* LATabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarController.m; sourceTree = "<group>"; };
-		7B0F3A0220D11E25002CF340 /* LATabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBarItem.h; sourceTree = "<group>"; };
-		7B0F3A0320D11E25002CF340 /* LATabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBarItem.m; sourceTree = "<group>"; };
-		7B0F3A0520D20C06002CF340 /* LATabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LATabBar.h; sourceTree = "<group>"; };
-		7B0F3A0620D20C06002CF340 /* LATabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LATabBar.m; sourceTree = "<group>"; };
 		7B0F3A0920D23ABD002CF340 /* PRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRootViewController.h; sourceTree = "<group>"; };
 		7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
 		7B0F3A0C20D23B01002CF340 /* PBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBaseViewController.h; sourceTree = "<group>"; };
@@ -82,6 +80,16 @@
 		7B0F3A2B20D26132002CF340 /* TestViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController1.m; sourceTree = "<group>"; };
 		7B0F3A2D20D26CA1002CF340 /* TestViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController2.h; sourceTree = "<group>"; };
 		7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController2.m; sourceTree = "<group>"; };
+		7B0F3A3120D362A9002CF340 /* LANavigationBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANavigationBarButton.h; sourceTree = "<group>"; };
+		7B0F3A3220D362A9002CF340 /* LANavigationBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANavigationBarButton.m; sourceTree = "<group>"; };
+		7B0F3A3520D362E8002CF340 /* LATabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATabBarItem.h; sourceTree = "<group>"; };
+		7B0F3A3620D362E8002CF340 /* LATabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LATabBar.m; sourceTree = "<group>"; };
+		7B0F3A3720D362E8002CF340 /* LATabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LATabBarItem.m; sourceTree = "<group>"; };
+		7B0F3A3820D362E8002CF340 /* LATabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LATabBar.h; sourceTree = "<group>"; };
+		7B0F3A3B20D36359002CF340 /* LANavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigationBar.h; sourceTree = "<group>"; };
+		7B0F3A3C20D36359002CF340 /* LANavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANavigationBar.m; sourceTree = "<group>"; };
+		7B0F3A3E20D39702002CF340 /* PNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNavigationController.h; sourceTree = "<group>"; };
+		7B0F3A3F20D39702002CF340 /* PNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNavigationController.m; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26832A20C68D5200FE9A60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B26832B20C68D5200FE9A60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,8 +135,6 @@
 		7B26842920CF6C0000FE9A60 /* LAController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAController.h; sourceTree = "<group>"; };
 		7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LALoadingView.h; sourceTree = "<group>"; };
 		7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LALoadingView.m; sourceTree = "<group>"; };
-		7B26842D20CFAC2000FE9A60 /* LANavigationBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigationBarButton.h; sourceTree = "<group>"; };
-		7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANavigationBarButton.m; sourceTree = "<group>"; };
 		7B26843320CFC69200FE9A60 /* LAErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAErrorView.h; sourceTree = "<group>"; };
 		7B26843420CFC69200FE9A60 /* LAErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAErrorView.m; sourceTree = "<group>"; };
 		7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LABaseViewController+LAHelper.h"; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 			children = (
 				7B0F3A0920D23ABD002CF340 /* PRootViewController.h */,
 				7B0F3A0A20D23ABD002CF340 /* PRootViewController.m */,
+				7B0F3A3E20D39702002CF340 /* PNavigationController.h */,
+				7B0F3A3F20D39702002CF340 /* PNavigationController.m */,
 				7B0F3A0C20D23B01002CF340 /* PBaseViewController.h */,
 				7B0F3A0D20D23B01002CF340 /* PBaseViewController.m */,
 			);
@@ -191,6 +199,28 @@
 			children = (
 			);
 			path = Res;
+			sourceTree = "<group>";
+		};
+		7B0F3A3020D36277002CF340 /* LANavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F3A3120D362A9002CF340 /* LANavigationBarButton.h */,
+				7B0F3A3220D362A9002CF340 /* LANavigationBarButton.m */,
+				7B0F3A3B20D36359002CF340 /* LANavigationBar.h */,
+				7B0F3A3C20D36359002CF340 /* LANavigationBar.m */,
+			);
+			path = LANavigationBar;
+			sourceTree = "<group>";
+		};
+		7B0F3A3420D362B3002CF340 /* LATabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F3A3520D362E8002CF340 /* LATabBarItem.h */,
+				7B0F3A3720D362E8002CF340 /* LATabBarItem.m */,
+				7B0F3A3820D362E8002CF340 /* LATabBar.h */,
+				7B0F3A3620D362E8002CF340 /* LATabBar.m */,
+			);
+			path = LATabBar;
 			sourceTree = "<group>";
 		};
 		7B26831E20C68D5200FE9A60 = {
@@ -273,16 +303,12 @@
 				7B26840220CE526100FE9A60 /* LASystemDevice.m */,
 				7B26840820CE633200FE9A60 /* UIKit+LACoreLib.h */,
 				7B26840920CE633200FE9A60 /* UIKit+LACoreLib.m */,
-				7B26842D20CFAC2000FE9A60 /* LANavigationBarButton.h */,
-				7B26842E20CFAC2000FE9A60 /* LANavigationBarButton.m */,
-				7B0F3A0220D11E25002CF340 /* LATabBarItem.h */,
-				7B0F3A0320D11E25002CF340 /* LATabBarItem.m */,
-				7B0F3A0520D20C06002CF340 /* LATabBar.h */,
-				7B0F3A0620D20C06002CF340 /* LATabBar.m */,
 				7B26842A20CF9E5A00FE9A60 /* LALoadingView.h */,
 				7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */,
 				7B26843320CFC69200FE9A60 /* LAErrorView.h */,
 				7B26843420CFC69200FE9A60 /* LAErrorView.m */,
+				7B0F3A3020D36277002CF340 /* LANavigationBar */,
+				7B0F3A3420D362B3002CF340 /* LATabBar */,
 				7B26840B20CE74F700FE9A60 /* UITableView+LACoreLib */,
 				7B26841520CE802E00FE9A60 /* LATableView */,
 			);
@@ -461,6 +487,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B0F3A3320D362A9002CF340 /* LANavigationBarButton.m in Sources */,
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
@@ -468,21 +495,23 @@
 				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
 				7B0F3A2620D23C3C002CF340 /* ViewController1.m in Sources */,
+				7B0F3A4020D39702002CF340 /* PNavigationController.m in Sources */,
 				7B0F3A0120D11DDB002CF340 /* LATabBarController.m in Sources */,
 				7B0F3A2520D23C3C002CF340 /* ViewController3.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
 				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
 				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
+				7B0F3A3D20D36359002CF340 /* LANavigationBar.m in Sources */,
 				7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */,
 				7B0F3A2C20D26132002CF340 /* TestViewController1.m in Sources */,
-				7B26842F20CFAC2000FE9A60 /* LANavigationBarButton.m in Sources */,
 				7B26840A20CE633200FE9A60 /* UIKit+LACoreLib.m in Sources */,
 				7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */,
+				7B0F3A3A20D362E8002CF340 /* LATabBarItem.m in Sources */,
 				7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */,
+				7B0F3A3920D362E8002CF340 /* LATabBar.m in Sources */,
 				7B26840320CE526100FE9A60 /* LASystemDevice.m in Sources */,
 				7B0F3A2420D23C3C002CF340 /* ViewController2.m in Sources */,
 				7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */,
-				7B0F3A0720D20C06002CF340 /* LATabBar.m in Sources */,
 				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
 				7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */,
 				7B26841420CE7ABE00FE9A60 /* UITableViewCell+LACoreLib.m in Sources */,
@@ -491,7 +520,6 @@
 				7B26841120CE784D00FE9A60 /* LATableViewCellContext.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
 				7B0F3A0B20D23ABD002CF340 /* PRootViewController.m in Sources */,
-				7B0F3A0420D11E25002CF340 /* LATabBarItem.m in Sources */,
 				7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

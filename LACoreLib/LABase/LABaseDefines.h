@@ -61,6 +61,8 @@ return __singleton__; \
 
 #define $(format, ...)              [NSString stringWithFormat:format, ##__VA_ARGS__]
 
+#define LA_WS(ws)                   __weak typeof(self) ws = self;
+
 
 
 #endif /* LABaseDefines_h */

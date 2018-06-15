@@ -20,6 +20,8 @@ typedef void(^LATabBarSelectBlock)(NSUInteger selectIndex);
 
 
 - (instancetype)initWithItems:(NSArray <LATabBarItem *>*)items
-                      topLine:(UIView *)topLine;
+              backgroungColor:(UIColor *)backgroungColor
+                 isEffectView:(BOOL)isEffectView
+                      haveLine:(BOOL)haveLine;
 
 @end

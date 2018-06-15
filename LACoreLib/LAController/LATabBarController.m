@@ -7,7 +7,6 @@
 //
 
 #import "LATabBarController.h"
-#import "LANavigationController.h"
 #import "LABase.h"
 #import "LAUI.h"
 
@@ -37,12 +36,13 @@
         
     };
     
-    
-    
     self.viewControllers = [[self la_configViewControllers] la_mapArrayWithBlock:^id(NSUInteger idx, UIViewController *obj) {
         
         obj.hidesBottomBarWhenPushed = NO;
-        return [[LANavigationController alloc] initWithRootViewController:obj];
+        
+        LANavigationController *nav = [weakSelf la_configNavigationController];
+        nav.viewControllers = @[obj];
+        return nav;
         
     }];
 }
@@ -65,6 +65,13 @@
 {
     return nil;
 }
+
+- (LANavigationController *)la_configNavigationController
+{
+    return [LANavigationController new];
+}
+
+
 
 
 - (void)didReceiveMemoryWarning

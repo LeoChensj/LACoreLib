@@ -7,6 +7,7 @@
 //
 
 #import "PRootViewController.h"
+#import "PNavigationController.h"
 #import "LACoreLib.h"
 #import "ViewController1.h"
 #import "ViewController2.h"
@@ -62,7 +63,9 @@
     line.backgroundColor = [UIColor colorWithCSS:@"#cccccc"];
     
     LATabBar *tabBar = [[LATabBar alloc] initWithItems:@[item1, item2, item3, item4]
-                                               topLine:line];
+                                       backgroungColor:[UIColor clearColor]
+                                          isEffectView:YES
+                                              haveLine:YES];
     
     
     
@@ -79,6 +82,10 @@
     return @[vc1, vc2, vc3, vc4];
 }
 
+- (LANavigationController *)la_configNavigationController
+{
+    return [PNavigationController new];
+}
 
 
 

@@ -8,12 +8,11 @@
 
 #import "LATabBar.h"
 #import "LABase.h"
-#import "LAUIDefines.h"
+#import "LAUI.h"
 
 @interface LATabBar ()
 
 @property (nonatomic, strong)NSArray <LATabBarItem *>*la_items;
-@property (nonatomic, strong)UIView *topLine;
 
 @end
 
@@ -22,9 +21,10 @@
 @implementation LATabBar
 
 - (instancetype)initWithItems:(NSArray <LATabBarItem *>*)items
-                      topLine:(UIView *)topLine;
+              backgroungColor:(UIColor *)backgroungColor
+                 isEffectView:(BOOL)isEffectView
+                     haveLine:(BOOL)haveLine
 {
-//    if(self = [super initWithFrame:CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_TabBarHeight)])
     if(self = [super init])
     {
         if(items.count < 2 || items.count > 5)
@@ -35,6 +35,25 @@
         }
         else
         {
+            self.backgroundColor = backgroungColor;
+            
+            
+            if(isEffectView)
+            {
+                UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithFrame:CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_TabBarHeight)];
+                effectView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+                [self addSubview:effectView];
+            }
+            
+            if(haveLine)
+            {
+                UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_LineMinHeight)];
+                topLine.backgroundColor = [UIColor colorWithCSS:@"#CCCCCC"];
+                [self addSubview:topLine];
+            }
+            
+            
+            
             self.la_items = items;
             CGFloat itemWidth = LA_SCREEN_WIDTH/items.count;
             for (NSUInteger i = 0; i < items.count; i++)
@@ -52,14 +71,6 @@
                 item.tag = i;
                 [item addTarget:self action:@selector(onSelected:) forControlEvents:UIControlEventTouchUpInside];
                 [item addTarget:self action:@selector(onSelectedRepeat:) forControlEvents:UIControlEventTouchDownRepeat];
-            }
-            
-            if(topLine)
-            {
-                self.topLine = topLine;
-                
-                topLine.frame = CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_LineMinHeight);
-                [self addSubview:topLine];
             }
         }
     }
@@ -101,15 +112,17 @@
 
 - (void)layoutSubviews
 {
+    /*
     [self.la_items la_mapArrayWithBlock:^id(NSUInteger idx, LATabBarItem *obj) {
         
         [self bringSubviewToFront:obj];
         
-        return nil;
+        return obj;
         
     }];
     
     [self bringSubviewToFront:self.topLine];
+     */
 }
 
 

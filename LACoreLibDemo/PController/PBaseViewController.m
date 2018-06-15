@@ -44,4 +44,9 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc
+{
+    LALog(@"dealloc-%@", NSStringFromClass([self class]));
+}
+
 @end

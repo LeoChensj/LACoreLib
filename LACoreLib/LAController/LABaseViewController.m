@@ -78,7 +78,22 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 #pragma mark - NavigationBar
 - (void)configNavigationBar
 {
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [self configColorForTitle], NSFontAttributeName: [self configFontForTitle]}];
+    if([self configColorForTitle])
+    {
+        NSMutableDictionary *attrs =  [NSMutableDictionary dictionaryWithDictionary:self.navigationController.navigationBar.titleTextAttributes];
+        [attrs setObject:[self configColorForTitle] forKey:NSForegroundColorAttributeName];
+        
+        [self.navigationController.navigationBar setTitleTextAttributes:attrs];
+    }
+    
+    if([self configFontForTitle])
+    {
+        NSMutableDictionary *attrs =  [NSMutableDictionary dictionaryWithDictionary:self.navigationController.navigationBar.titleTextAttributes];
+        [attrs setObject:[self configFontForTitle] forKey:NSFontAttributeName];
+        
+        [self.navigationController.navigationBar setTitleTextAttributes:attrs];
+    }
+    
     
     NSString *title = [self.info objectForKey:LABaseViewControllerInfoKeyTitle];
     if(LA_IS_STRING(title))
@@ -93,12 +108,12 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 - (UIColor *)configColorForTitle
 {
-    return [UIColor blackColor];
+    return nil;
 }
 
 - (UIFont *)configFontForTitle
 {
-    return [UIFont systemFontOfSize:16];
+    return nil;
 }
 
 - (void)configBackButton
@@ -147,21 +162,37 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 #pragma mark - PopGestureRecognizer
 - (void)configPopGestureRecognizer
 {
-    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
 }
 
 /*
  子类重写此方法可控制是否可以左滑pop
  */
+- (BOOL)configEnablePopGestureRecognizer
+{
+    return ([self.navigationController.viewControllers firstObject] != self);
+}
+
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
     if (gestureRecognizer == self.navigationController.interactivePopGestureRecognizer)
     {
-        return ([self.navigationController.viewControllers firstObject] != self);
+        return [self configEnablePopGestureRecognizer];
     }
     
     return YES;
+}
+
+
+#pragma mark - StatusBarStyle
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return [self configStatusBarStyle];
+}
+
+- (UIStatusBarStyle)configStatusBarStyle;
+{
+    return UIStatusBarStyleDefault;
 }
 
 

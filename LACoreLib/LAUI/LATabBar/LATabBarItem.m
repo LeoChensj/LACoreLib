@@ -99,7 +99,7 @@
     
     _lbTitle.la_width = self.la_width;
     _lbTitle.la_height = self.titleFont.pointSize;
-    _lbTitle.la_y = _imgvIcon.la_bottom + 6;
+    _lbTitle.la_y = _imgvIcon.la_bottom + 8;
     _lbTitle.la_centerX = self.la_width*0.5;
     
     _vBadge.la_width = 8;
