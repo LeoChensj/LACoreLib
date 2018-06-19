@@ -46,10 +46,10 @@
 
 
 #define LA_SINGLE_DEF \
-+ (instancetype)sharedInstance;
++ (instancetype)shareInstance;
 
 #define LA_SINGLE_IMP \
-+ (instancetype)sharedInstance \
++ (instancetype)shareInstance \
 { \
 static dispatch_once_t once; \
 static id __singleton__; \

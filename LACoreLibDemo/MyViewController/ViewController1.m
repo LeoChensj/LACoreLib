@@ -8,7 +8,7 @@
 
 #import "ViewController1.h"
 
-#import "TestViewController1.h"
+#import "LANavigator.h"
 
 
 @interface ViewController1 ()
@@ -27,9 +27,11 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    TestViewController1 *vc = [TestViewController1 new];
+//    TestViewController1 *vc = [TestViewController1 new];
+//
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
 }
 
 

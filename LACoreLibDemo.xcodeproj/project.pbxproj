@@ -42,6 +42,11 @@
 		7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */; };
 		7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843420CFC69200FE9A60 /* LAErrorView.m */; };
 		7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */; };
+		7BBEF89320D8988500C2CF8B /* LARouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89220D8988500C2CF8B /* LARouter.m */; };
+		7BBEF89620D899C900C2CF8B /* LAControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */; };
+		7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89820D8D45700C2CF8B /* LANavigator.m */; };
+		7BBEF89F20D8E9A400C2CF8B /* MyControllerRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89E20D8E9A400C2CF8B /* MyControllerRegister.m */; };
+		7BBEF8A220D8F60200C2CF8B /* TestViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF8A120D8F60200C2CF8B /* TestViewController3.m */; };
 		99DD9F02E68DF2D601120C4E /* Pods_LACoreLibDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAC04CB8CFB35C47A610387 /* Pods_LACoreLibDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +144,16 @@
 		7B26843420CFC69200FE9A60 /* LAErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAErrorView.m; sourceTree = "<group>"; };
 		7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LABaseViewController+LAHelper.h"; sourceTree = "<group>"; };
 		7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LABaseViewController+LAHelper.m"; sourceTree = "<group>"; };
+		7BBEF89120D8988500C2CF8B /* LARouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LARouter.h; sourceTree = "<group>"; };
+		7BBEF89220D8988500C2CF8B /* LARouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LARouter.m; sourceTree = "<group>"; };
+		7BBEF89420D899C900C2CF8B /* LAControllerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAControllerFactory.h; sourceTree = "<group>"; };
+		7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAControllerFactory.m; sourceTree = "<group>"; };
+		7BBEF89720D8D45700C2CF8B /* LANavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigator.h; sourceTree = "<group>"; };
+		7BBEF89820D8D45700C2CF8B /* LANavigator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANavigator.m; sourceTree = "<group>"; };
+		7BBEF89D20D8E9A400C2CF8B /* MyControllerRegister.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyControllerRegister.h; sourceTree = "<group>"; };
+		7BBEF89E20D8E9A400C2CF8B /* MyControllerRegister.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyControllerRegister.m; sourceTree = "<group>"; };
+		7BBEF8A020D8F60200C2CF8B /* TestViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController3.h; sourceTree = "<group>"; };
+		7BBEF8A120D8F60200C2CF8B /* TestViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +193,8 @@
 		7B0F3A1B20D23C0F002CF340 /* MyViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7BBEF89D20D8E9A400C2CF8B /* MyControllerRegister.h */,
+				7BBEF89E20D8E9A400C2CF8B /* MyControllerRegister.m */,
 				7B0F3A1F20D23C3C002CF340 /* ViewController1.h */,
 				7B0F3A2120D23C3C002CF340 /* ViewController1.m */,
 				7B0F3A2020D23C3C002CF340 /* ViewController2.h */,
@@ -190,6 +207,8 @@
 				7B0F3A2B20D26132002CF340 /* TestViewController1.m */,
 				7B0F3A2D20D26CA1002CF340 /* TestViewController2.h */,
 				7B0F3A2E20D26CA1002CF340 /* TestViewController2.m */,
+				7BBEF8A020D8F60200C2CF8B /* TestViewController3.h */,
+				7BBEF8A120D8F60200C2CF8B /* TestViewController3.m */,
 			);
 			path = MyViewController;
 			sourceTree = "<group>";
@@ -355,6 +374,12 @@
 				7B26842720CF5FD600FE9A60 /* LABaseViewController.m */,
 				7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */,
 				7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */,
+				7BBEF89420D899C900C2CF8B /* LAControllerFactory.h */,
+				7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */,
+				7BBEF89720D8D45700C2CF8B /* LANavigator.h */,
+				7BBEF89820D8D45700C2CF8B /* LANavigator.m */,
+				7BBEF89120D8988500C2CF8B /* LARouter.h */,
+				7BBEF89220D8988500C2CF8B /* LARouter.m */,
 			);
 			path = LAController;
 			sourceTree = "<group>";
@@ -488,10 +513,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0F3A3320D362A9002CF340 /* LANavigationBarButton.m in Sources */,
+				7BBEF89620D899C900C2CF8B /* LAControllerFactory.m in Sources */,
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
+				7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */,
 				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
 				7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */,
+				7BBEF89320D8988500C2CF8B /* LARouter.m in Sources */,
 				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
 				7B0F3A2620D23C3C002CF340 /* ViewController1.m in Sources */,
@@ -506,6 +534,7 @@
 				7B0F3A2C20D26132002CF340 /* TestViewController1.m in Sources */,
 				7B26840A20CE633200FE9A60 /* UIKit+LACoreLib.m in Sources */,
 				7B2683F620CA799E00FE9A60 /* LABaseUtil.m in Sources */,
+				7BBEF89F20D8E9A400C2CF8B /* MyControllerRegister.m in Sources */,
 				7B0F3A3A20D362E8002CF340 /* LATabBarItem.m in Sources */,
 				7B2683CE20C8DF4400FE9A60 /* LADefaultValue.m in Sources */,
 				7B0F3A3920D362E8002CF340 /* LATabBar.m in Sources */,
@@ -514,6 +543,7 @@
 				7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */,
 				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
 				7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */,
+				7BBEF8A220D8F60200C2CF8B /* TestViewController3.m in Sources */,
 				7B26841420CE7ABE00FE9A60 /* UITableViewCell+LACoreLib.m in Sources */,
 				7B26840E20CE756B00FE9A60 /* LATableViewCellItem.m in Sources */,
 				7B26841E20CE808300FE9A60 /* LATableHeightCache.m in Sources */,

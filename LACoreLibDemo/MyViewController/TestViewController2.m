@@ -8,6 +8,9 @@
 
 #import "TestViewController2.h"
 #import "TestViewController1.h"
+#import "PNavigationController.h"
+#import "LANavigator.h"
+
 
 @interface TestViewController2 ()
 

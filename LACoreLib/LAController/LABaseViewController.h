@@ -32,6 +32,7 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 
 
 
+
 #pragma mark - Parameter Info
 /*
  Push传递过来的所有参数
@@ -89,22 +90,6 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
  配置状态栏颜色
  */
 - (UIStatusBarStyle)configStatusBarStyle;
-
-
-
-
-
-
-
-#pragma mark - Layout
-- (CGFloat)contentTopInset;
-- (CGFloat)contentBottomInset;
-- (CGFloat)contentLeftInset;
-- (CGFloat)contentRightInset;
-
-@property (nonatomic, assign) UIEdgeInsets contentInsets;
-
-@property (nonatomic, assign, readonly) CGRect contentRect;
 
 
 

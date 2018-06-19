@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "LACoreLib.h"
 #import "PRootViewController.h"
+#import "MyControllerRegister.h"
 
 
 @interface AppDelegate ()
@@ -19,6 +20,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+//    LABaseViewController *asd = [LABaseViewController new];
+//    [asd setValue:nil forKey:@"routerUrl"];
+    
     
     //NSArray *array = @[@21, @2, @13, @25, @8];
     
@@ -76,6 +81,8 @@
     
 //    UIScrollView *asd;
 //    [asd la_disableContentInsetAdjust];
+    
+    [MyControllerRegister registerMyController];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];

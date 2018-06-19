@@ -45,9 +45,9 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     [self configNavigationBar];
     
     [self configPopGestureRecognizer];
-    
-    [self configLayout];
 }
+
+
 
 
 
@@ -200,76 +200,6 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 
 
-#pragma mark - Layout
-- (void)configLayout
-{
-    if (@available(iOS 11.0, *))
-    {
-        self.contentInsets = self.view.safeAreaInsets;
-    }
-    else
-    {
-        self.contentInsets = UIEdgeInsetsMake(self.contentTopInset,
-                                              self.contentLeftInset,
-                                              self.contentBottomInset,
-                                              self.contentRightInset);
-    }
-    [self.view setNeedsLayout];
-}
-
-- (CGFloat)contentTopInset
-{
-    if(self.navigationController)
-    {
-        return LA_TopBarHeight;
-    }
-    
-    return LA_StatusBarHeight;
-}
-
-- (CGFloat)contentBottomInset
-{
-    if(self.tabBarController &&
-       self.tabBarController.tabBar.hidden == NO)
-    {
-        return LA_TabBarHeight;
-    }
-    
-    return 0;
-}
-
-- (CGFloat)contentLeftInset
-{
-    return 0;
-}
-
-- (CGFloat)contentRightInset
-{
-    return 0;
-}
-
--(void)viewSafeAreaInsetsDidChange
-{
-    if (@available(iOS 11.0, *))
-    {
-        [super viewSafeAreaInsetsDidChange];
-        
-        self.contentInsets = self.view.safeAreaInsets;
-        
-        [self.view setNeedsLayout];
-    }
-}
-
-- (CGRect)contentRect
-{
-    return CGRectMake(self.contentInsets.left,
-                      self.contentInsets.top,
-                      self.view.la_width - self.contentInsets.left - self.contentInsets.right,
-                      self.view.la_height - self.contentInsets.top - self.contentInsets.bottom);
-}
-
-
-
 
 
 #pragma mark - 加载动画
@@ -312,6 +242,10 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc
+{
+    LALog(@"dealloc-%@", NSStringFromClass([self class]));
+}
 
 
 @end

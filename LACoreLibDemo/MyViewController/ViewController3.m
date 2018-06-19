@@ -7,7 +7,9 @@
 //
 
 #import "ViewController3.h"
-#import "TestViewController2.h"
+#import "TestViewController3.h"
+#import "PNavigationController.h"
+#import "LANavigator.h"
 
 @interface ViewController3 ()
 
@@ -25,10 +27,7 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    //TestViewController2 *vc = [TestViewController2 new];
-    
-    //[self.navigationController pushViewController:vc animated:YES];
-    //[self presentViewController:vc animated:YES completion:nil];
+    [LANavigator presentToUrl:@"tvc3" vcInfo:nil navigation:[PNavigationController class] animated:YES];
 }
 
 

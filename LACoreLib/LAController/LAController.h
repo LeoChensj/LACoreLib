@@ -10,8 +10,12 @@
 #define LAController_h
 
 #import "LANavigationController.h"
+#import "LATabBarController.h"
 #import "LABaseViewController.h"
 #import "LABaseViewController+LAHelper.h"
+#import "LAControllerFactory.h"
+#import "LANavigator.h"
+#import "LARouter.h"
 
 
 #endif /* LAController_h */
