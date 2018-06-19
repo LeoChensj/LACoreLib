@@ -23,6 +23,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 @end
 
+
 @implementation LABaseViewController
 
 - (instancetype)init
@@ -119,7 +120,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 - (void)configBackButton
 {
     _btnBack = [LANavigationBarButton buttonWithBarType:LANavigationBarButtonTypeImage];
-    [_btnBack addTarget:self action:@selector(la_onBack) forControlEvents:UIControlEventTouchUpInside];
+    [_btnBack addTarget:self action:@selector(onBack) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_btnBack];
 }
@@ -130,6 +131,11 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     [_btnAction addTarget:self action:@selector(onAction) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_btnAction];
+}
+
+- (void)onBack
+{
+    [self la_onBack];
 }
 
 - (void)onAction
@@ -205,7 +211,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 #pragma mark - 加载动画
 - (LALoadingView *)configLoadingView
 {
-    return nil;
+    return [[LALoadingView alloc] init];
 }
 
 

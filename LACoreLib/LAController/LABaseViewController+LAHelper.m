@@ -55,7 +55,7 @@
 {
     if(!self.loadingView)
     {
-        self.loadingView = [self configLoadingView];
+        [self setValue:[self configLoadingView] forKey:@"loadingView"];
         [self.view addSubview:self.loadingView];
     }
     
@@ -68,14 +68,14 @@
 
 - (void)la_hideLoadingView
 {
-    self.networkErrorView.hidden = YES;
+    self.loadingView.hidden = YES;
 }
 
 - (void)la_showNetworkErrorView:(NSError *)error
 {
     if (self.networkErrorView == nil)
     {
-        self.networkErrorView = [self configErrorView];
+        [self setValue:[self configErrorView] forKey:@"networkErrorView"];
         [self.networkErrorView addTarget:self
                                   action:@selector(onNetworkErrorViewReload)
                         forControlEvents:UIControlEventTouchUpInside];
@@ -105,7 +105,7 @@
 {
     if (self.noDataErrorView == nil)
     {
-        self.noDataErrorView = [self configErrorView];
+        [self setValue:[self configErrorView] forKey:@"noDataErrorView"];
         [self.noDataErrorView addTarget:self
                                  action:@selector(onNoDataErrorViewReload)
                        forControlEvents:UIControlEventTouchUpInside];

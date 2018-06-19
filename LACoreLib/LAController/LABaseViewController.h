@@ -24,9 +24,9 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 @property(nonatomic, strong, readonly) LANavigationBarButton *btnBack;
 @property(nonatomic, strong, readonly) LANavigationBarButton *btnAction;
 
-@property (nonatomic, strong) LALoadingView *loadingView;
-@property (nonatomic, strong) LAErrorView *networkErrorView;
-@property (nonatomic, strong) LAErrorView *noDataErrorView;
+@property (nonatomic, strong, readonly) LALoadingView *loadingView;
+@property (nonatomic, strong, readonly) LAErrorView *networkErrorView;
+@property (nonatomic, strong, readonly) LAErrorView *noDataErrorView;
 
 
 
@@ -65,6 +65,11 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
  配置导航栏title字体
  */
 - (UIFont *)configFontForTitle;
+
+/*
+ 左侧back按钮回调，根据需要重写
+ */
+- (void)onBack;
 
 /*
  右侧action按钮回调，根据需要重写

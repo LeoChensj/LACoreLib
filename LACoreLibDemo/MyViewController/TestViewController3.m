@@ -37,7 +37,7 @@
     self.btnBack.hidden = NO;
 }
 
-- (void)la_onBack
+- (void)onBack
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

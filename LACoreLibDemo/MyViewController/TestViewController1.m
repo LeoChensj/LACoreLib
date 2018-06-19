@@ -7,6 +7,8 @@
 //
 
 #import "TestViewController1.h"
+#import "LABaseViewController+LAHelper.h"
+
 
 @interface TestViewController1 ()
 
@@ -36,6 +38,15 @@
 {
     self.statusBarStyleFlag = !self.statusBarStyleFlag;
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    if(self.statusBarStyleFlag)
+    {
+        [self la_showLoadingView];
+    }
+    else
+    {
+        [self la_hideLoadingView];
+    }
 }
 
 - (void)didReceiveMemoryWarning

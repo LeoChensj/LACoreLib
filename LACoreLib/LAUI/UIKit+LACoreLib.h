@@ -37,11 +37,11 @@
 
 @interface UIColor (LACoreLib_Hex)
 
-+ (UIColor *)colorWithCSS:(NSString *)css;
++ (UIColor *)la_colorWithCSS:(NSString *)css;
 
-+ (UIColor *)colorWithHex:(NSUInteger)hex;
++ (UIColor *)la_colorWithHex:(NSUInteger)hex;
 
-+ (UIColor *)colorWithColor:(UIColor *)color
++ (UIColor *)la_colorWithColor:(UIColor *)color
                       alpha:(CGFloat)alpha;
 
 @end

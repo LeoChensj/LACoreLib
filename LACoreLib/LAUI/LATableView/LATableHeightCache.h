@@ -38,9 +38,4 @@
  */
 - (void)clearCache;
 
-/*
- 删除sections缓存
- */
-//- (void)
-
 @end

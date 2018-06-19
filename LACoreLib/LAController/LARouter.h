@@ -10,6 +10,10 @@
 
 @interface LARouter : NSObject
 
+/*
+ 我还没想好怎么写  哈哈😄
+ */
+
 + (void)routerToUrl:(NSString *)url
            animated:(BOOL)animated;
 

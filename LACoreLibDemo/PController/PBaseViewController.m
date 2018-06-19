@@ -22,7 +22,7 @@
 
 - (UIColor *)configColorForTitle
 {
-    return [UIColor colorWithCSS:@"#328BEF"];
+    return [UIColor la_colorWithCSS:@"#328BEF"];
 }
 
 - (UIFont *)configFontForTitle

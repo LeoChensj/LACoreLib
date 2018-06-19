@@ -32,35 +32,35 @@
     LATabBarItem *item1 = [[LATabBarItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabbar_10"]
                                                         selectImage:[UIImage imageNamed:@"tabbar_11"]
                                                         normalColor:[UIColor lightGrayColor]
-                                                        selectColor:[UIColor colorWithCSS:@"#328BEF"]
+                                                        selectColor:[UIColor la_colorWithCSS:@"#328BEF"]
                                                               title:@"Leo"
                                                           titleFont:[UIFont systemFontOfSize:10]];
     
     LATabBarItem *item2 = [[LATabBarItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabbar_20"]
                                                         selectImage:[UIImage imageNamed:@"tabbar_21"]
                                                         normalColor:[UIColor lightGrayColor]
-                                                        selectColor:[UIColor colorWithCSS:@"#328BEF"]
+                                                        selectColor:[UIColor la_colorWithCSS:@"#328BEF"]
                                                               title:@"Chen"
                                                           titleFont:[UIFont systemFontOfSize:10]];
     
     LATabBarItem *item3 = [[LATabBarItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabbar_30"]
                                                         selectImage:[UIImage imageNamed:@"tabbar_31"]
                                                         normalColor:[UIColor lightGrayColor]
-                                                        selectColor:[UIColor colorWithCSS:@"#328BEF"]
+                                                        selectColor:[UIColor la_colorWithCSS:@"#328BEF"]
                                                               title:@"发现"
                                                           titleFont:[UIFont systemFontOfSize:10]];
     
     LATabBarItem *item4 = [[LATabBarItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabbar_40"]
                                                         selectImage:[UIImage imageNamed:@"tabbar_41"]
                                                         normalColor:[UIColor lightGrayColor]
-                                                        selectColor:[UIColor colorWithCSS:@"#328BEF"]
+                                                        selectColor:[UIColor la_colorWithCSS:@"#328BEF"]
                                                               title:@"我的"
                                                           titleFont:[UIFont systemFontOfSize:10]];
     
     
     
     UIView *line = [[UIView alloc] init];
-    line.backgroundColor = [UIColor colorWithCSS:@"#cccccc"];
+    line.backgroundColor = [UIColor la_colorWithCSS:@"#cccccc"];
     
     LATabBar *tabBar = [[LATabBar alloc] initWithItems:@[item1, item2, item3, item4]
                                        backgroungColor:[UIColor clearColor]

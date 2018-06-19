@@ -68,12 +68,12 @@
         _vBadge = [[UIView alloc] init];
         _vBadge.layer.masksToBounds = YES;
         _vBadge.layer.cornerRadius = 4;
-        _vBadge.backgroundColor = [UIColor colorWithCSS:@"#FF4C4C"];
+        _vBadge.backgroundColor = [UIColor la_colorWithCSS:@"#FF4C4C"];
         [self addSubview:_vBadge];
         
         
         _lbBadge = [[UILabel alloc] init];
-        _lbBadge.backgroundColor = [UIColor colorWithCSS:@"#FF4C4C"];
+        _lbBadge.backgroundColor = [UIColor la_colorWithCSS:@"#FF4C4C"];
         _lbBadge.layer.masksToBounds = YES;
         _lbBadge.layer.cornerRadius = 8;
         _lbBadge.textColor = [UIColor whiteColor];

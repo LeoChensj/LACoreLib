@@ -48,7 +48,7 @@
             if(haveLine)
             {
                 UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(0, 0, LA_SCREEN_WIDTH, LA_LineMinHeight)];
-                topLine.backgroundColor = [UIColor colorWithCSS:@"#CCCCCC"];
+                topLine.backgroundColor = [UIColor la_colorWithCSS:@"#CCCCCC"];
                 [self addSubview:topLine];
             }
             

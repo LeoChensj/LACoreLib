@@ -136,7 +136,7 @@
 
 @implementation UIColor (LACoreLib_Hex)
 
-+ (UIColor *)colorWithCSS:(NSString *)css
++ (UIColor *)la_colorWithCSS:(NSString *)css
 {
     NSString *colorString = [[css stringByReplacingOccurrencesOfString: @"#" withString: @""] uppercaseString];
     
@@ -144,27 +144,27 @@
     switch ([colorString length]) {
         case 3: // #RGB
             alpha = 1.0f;
-            red   = [self colorComponentFrom: colorString start: 0 length: 1];
-            green = [self colorComponentFrom: colorString start: 1 length: 1];
-            blue  = [self colorComponentFrom: colorString start: 2 length: 1];
+            red   = [self la_colorComponentFrom: colorString start: 0 length: 1];
+            green = [self la_colorComponentFrom: colorString start: 1 length: 1];
+            blue  = [self la_colorComponentFrom: colorString start: 2 length: 1];
             break;
         case 4: // #ARGB
-            alpha = [self colorComponentFrom: colorString start: 0 length: 1];
-            red   = [self colorComponentFrom: colorString start: 1 length: 1];
-            green = [self colorComponentFrom: colorString start: 2 length: 1];
-            blue  = [self colorComponentFrom: colorString start: 3 length: 1];
+            alpha = [self la_colorComponentFrom: colorString start: 0 length: 1];
+            red   = [self la_colorComponentFrom: colorString start: 1 length: 1];
+            green = [self la_colorComponentFrom: colorString start: 2 length: 1];
+            blue  = [self la_colorComponentFrom: colorString start: 3 length: 1];
             break;
         case 6: // #RRGGBB
             alpha = 1.0f;
-            red   = [self colorComponentFrom: colorString start: 0 length: 2];
-            green = [self colorComponentFrom: colorString start: 2 length: 2];
-            blue  = [self colorComponentFrom: colorString start: 4 length: 2];
+            red   = [self la_colorComponentFrom: colorString start: 0 length: 2];
+            green = [self la_colorComponentFrom: colorString start: 2 length: 2];
+            blue  = [self la_colorComponentFrom: colorString start: 4 length: 2];
             break;
         case 8: // #AARRGGBB
-            alpha = [self colorComponentFrom: colorString start: 0 length: 2];
-            red   = [self colorComponentFrom: colorString start: 2 length: 2];
-            green = [self colorComponentFrom: colorString start: 4 length: 2];
-            blue  = [self colorComponentFrom: colorString start: 6 length: 2];
+            alpha = [self la_colorComponentFrom: colorString start: 0 length: 2];
+            red   = [self la_colorComponentFrom: colorString start: 2 length: 2];
+            green = [self la_colorComponentFrom: colorString start: 4 length: 2];
+            blue  = [self la_colorComponentFrom: colorString start: 6 length: 2];
             break;
         default:
             return nil;
@@ -173,7 +173,7 @@
     return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
 }
 
-+ (UIColor *)colorWithHex:(NSUInteger)hex
++ (UIColor *)la_colorWithHex:(NSUInteger)hex
 {
     CGFloat red, green, blue, alpha;
     
@@ -185,7 +185,7 @@
     return [UIColor colorWithRed: red green:green blue:blue alpha:alpha];
 }
 
-+ (UIColor *)colorWithColor:(UIColor *)color
++ (UIColor *)la_colorWithColor:(UIColor *)color
                       alpha:(CGFloat)alpha
 {
     CGFloat red = 0.0;
@@ -199,7 +199,7 @@
 
 
 #pragma mark - Private
-+ (CGFloat)colorComponentFrom:(NSString *)string
++ (CGFloat)la_colorComponentFrom:(NSString *)string
                         start:(NSUInteger)start
                        length:(NSUInteger)length
 {
