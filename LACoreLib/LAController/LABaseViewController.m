@@ -219,7 +219,12 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 
 
 #pragma mark - ErrorView
-- (LAErrorView *)configErrorView;
+- (LAErrorView *)configNetworkErrorView
+{
+    return nil;
+}
+
+- (LAErrorView *)configNoDataErrorView
 {
     return nil;
 }
@@ -227,11 +232,6 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
 - (void)onNetworkErrorViewReload
 {
     //子类重写
-}
-
-- (NSString *)configNoDataText
-{
-    return @"have no data";
 }
 
 - (void)onNoDataErrorViewReload

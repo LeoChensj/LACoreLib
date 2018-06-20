@@ -113,17 +113,14 @@ LA_EXTERN NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController;
 /*
  子类重写该方法，返回LAErrorView子类，在LAErrorView子类中自定义
  */
-- (LAErrorView *)configErrorView;
+- (LAErrorView *)configNetworkErrorView;
+
+- (LAErrorView *)configNoDataErrorView;
 
 /*
  网络错误视图显示后，触发重新加载的回调
  */
 - (void)onNetworkErrorViewReload;
-
-/*
- 没有数据的缺省视图的显示文本
- */
-- (NSString *)configNoDataText;
 
 /*
  没有数据视图显示后，触发重新加载的回调

@@ -25,14 +25,10 @@
     self.navigationItem.title = @"Leo";
 }
 
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-//    TestViewController1 *vc = [TestViewController1 new];
-//
-//    [self.navigationController pushViewController:vc animated:YES];
-    
-    [LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
-}
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    [LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
+//}
 
 
 - (void)didReceiveMemoryWarning

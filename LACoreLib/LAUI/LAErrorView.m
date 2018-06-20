@@ -10,14 +10,32 @@
 
 @implementation LAErrorView
 
-- (void)updateViewWithError:(NSError *)error
+@synthesize imageView = _imageView;
+@synthesize lbText = _lbText;
+@synthesize btnReload = _btnReload;
+
+
+
+- (void)configNetworkErrorViewWithError:(NSError *)error
 {
     
 }
 
-- (void)updateViewWithText:(NSString *)text
+
+- (void)configNoDataView
 {
     
+}
+
+
+- (void)setupImage:(UIImage *)image
+{
+    self.imageView.image = image;
+}
+
+- (void)setupText:(NSString *)text
+{
+    _lbText.text = text;
 }
 
 @end

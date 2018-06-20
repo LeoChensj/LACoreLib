@@ -7,6 +7,8 @@
 //
 
 #import "PBaseViewController.h"
+#import "PErrorView.h"
+
 
 @interface PBaseViewController ()
 
@@ -35,6 +37,16 @@
     [super configNavigationBarButtons];
     
     [self.btnBack setImage:[UIImage imageNamed:@"ic_back_black"]];
+}
+
+- (LAErrorView *)configNetworkErrorView
+{
+    return [[PErrorView alloc] init];
+}
+
+- (LAErrorView *)configNoDataErrorView
+{
+    return [[PErrorView alloc] init];
 }
 
 

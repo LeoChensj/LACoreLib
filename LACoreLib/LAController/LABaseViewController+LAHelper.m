@@ -68,6 +68,7 @@
 
 - (void)la_hideLoadingView
 {
+    [self.loadingView stop];
     self.loadingView.hidden = YES;
 }
 
@@ -75,22 +76,25 @@
 {
     if (self.networkErrorView == nil)
     {
-        [self setValue:[self configErrorView] forKey:@"networkErrorView"];
-        [self.networkErrorView addTarget:self
-                                  action:@selector(onNetworkErrorViewReload)
-                        forControlEvents:UIControlEventTouchUpInside];
+        [self setValue:[self configNetworkErrorView] forKey:@"networkErrorView"];
         
-        if(self.networkErrorView.btnAction)
+        if(self.networkErrorView.btnReload)
         {
-            [self.networkErrorView.btnAction addTarget:self
+            [self.networkErrorView.btnReload addTarget:self
                                                 action:@selector(onNetworkErrorViewReload)
                                       forControlEvents:UIControlEventTouchUpInside];
+        }
+        else
+        {
+            [self.networkErrorView addTarget:self
+                                      action:@selector(onNetworkErrorViewReload)
+                            forControlEvents:UIControlEventTouchUpInside];
         }
         
         [self.view addSubview:self.networkErrorView];
     }
     
-    [self.networkErrorView updateViewWithError:error];
+    [self.networkErrorView configNetworkErrorViewWithError:error];
     self.networkErrorView.frame = self.view.bounds;
     [self.view bringSubviewToFront:self.networkErrorView];
     self.networkErrorView.hidden = NO;
@@ -105,22 +109,25 @@
 {
     if (self.noDataErrorView == nil)
     {
-        [self setValue:[self configErrorView] forKey:@"noDataErrorView"];
-        [self.noDataErrorView addTarget:self
-                                 action:@selector(onNoDataErrorViewReload)
-                       forControlEvents:UIControlEventTouchUpInside];
+        [self setValue:[self configNoDataErrorView] forKey:@"noDataErrorView"];
         
-        if(self.noDataErrorView.btnAction)
+        if(self.noDataErrorView.btnReload)
         {
-            [self.noDataErrorView.btnAction addTarget:self
+            [self.noDataErrorView.btnReload addTarget:self
                                                action:@selector(onNoDataErrorViewReload)
                                      forControlEvents:UIControlEventTouchUpInside];
+        }
+        else
+        {
+            [self.noDataErrorView addTarget:self
+                                     action:@selector(onNoDataErrorViewReload)
+                           forControlEvents:UIControlEventTouchUpInside];
         }
         
         [self.view addSubview:self.noDataErrorView];
     }
     
-    [self.noDataErrorView updateViewWithText:[self configNoDataText]];
+    [self.noDataErrorView configNoDataView];
     self.noDataErrorView.frame = self.view.bounds;
     [self.view bringSubviewToFront:self.noDataErrorView];
     self.noDataErrorView.hidden = NO;
