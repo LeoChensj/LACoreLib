@@ -63,6 +63,7 @@
             make.bottom.mas_equalTo(-30);
             
         }];
+        
     }
     
     return self;

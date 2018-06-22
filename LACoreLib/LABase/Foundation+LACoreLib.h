@@ -44,11 +44,15 @@
 
 - (NSData *)la_convertToData;
 
-- (NSString*)la_encodingWithUTF8;
+- (NSString *)la_encodingWithUTF8;
 
 - (CGSize)la_attrStrSizeWithFont:(UIFont *)font
                          maxSize:(CGSize)maxSize
                      lineSpacing:(CGFloat)lineSpacing;
+
+- (NSString *)la_md5;
+
+- (NSDictionary *)la_toDictionary;
 
 @end
 

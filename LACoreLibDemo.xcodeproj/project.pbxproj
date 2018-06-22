@@ -23,6 +23,10 @@
 		7B0F3A4020D39702002CF340 /* PNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F3A3F20D39702002CF340 /* PNavigationController.m */; };
 		7B0F716F20D9ECF300C91292 /* PErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F716E20D9ECF300C91292 /* PErrorView.m */; };
 		7B0F717320DA329600C91292 /* LAFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F717220DA329600C91292 /* LAFlowLayout.m */; };
+		7B0F71AE20DC9A1E00C91292 /* LANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */; };
+		7B0F71B420DC9B2800C91292 /* LANetworkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */; };
+		7B0F71BA20DC9B9400C91292 /* LANetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */; };
+		7B0F71BD20DCF57F00C91292 /* LANetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71BC20DCF57F00C91292 /* LANetworkError.m */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
@@ -101,6 +105,14 @@
 		7B0F716E20D9ECF300C91292 /* PErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PErrorView.m; sourceTree = "<group>"; };
 		7B0F717120DA329600C91292 /* LAFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAFlowLayout.h; sourceTree = "<group>"; };
 		7B0F717220DA329600C91292 /* LAFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAFlowLayout.m; sourceTree = "<group>"; };
+		7B0F71AC20DC9A1E00C91292 /* LANetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkManager.h; sourceTree = "<group>"; };
+		7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkManager.m; sourceTree = "<group>"; };
+		7B0F71B220DC9B2800C91292 /* LANetworkBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkBaseApi.h; sourceTree = "<group>"; };
+		7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkBaseApi.m; sourceTree = "<group>"; };
+		7B0F71B820DC9B9400C91292 /* LANetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkConfig.h; sourceTree = "<group>"; };
+		7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkConfig.m; sourceTree = "<group>"; };
+		7B0F71BB20DCF57F00C91292 /* LANetworkError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkError.h; sourceTree = "<group>"; };
+		7B0F71BC20DCF57F00C91292 /* LANetworkError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkError.m; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26832A20C68D5200FE9A60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B26832B20C68D5200FE9A60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -306,9 +318,9 @@
 			children = (
 				7B2683BC20C8D99200FE9A60 /* LACoreLib.h */,
 				7B2683BD20C8D99200FE9A60 /* LABase */,
-				7B2683F920CE49FE00FE9A60 /* LANetwork */,
 				7B2683FB20CE4E1700FE9A60 /* LAUI */,
 				7B26842220CF5AD400FE9A60 /* LAController */,
+				7B2683F920CE49FE00FE9A60 /* LANetwork */,
 			);
 			path = LACoreLib;
 			sourceTree = "<group>";
@@ -334,6 +346,14 @@
 			isa = PBXGroup;
 			children = (
 				7B2683FA20CE4A8C00FE9A60 /* LANetwork.h */,
+				7B0F71AC20DC9A1E00C91292 /* LANetworkManager.h */,
+				7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */,
+				7B0F71B220DC9B2800C91292 /* LANetworkBaseApi.h */,
+				7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */,
+				7B0F71B820DC9B9400C91292 /* LANetworkConfig.h */,
+				7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */,
+				7B0F71BB20DCF57F00C91292 /* LANetworkError.h */,
+				7B0F71BC20DCF57F00C91292 /* LANetworkError.m */,
 			);
 			path = LANetwork;
 			sourceTree = "<group>";
@@ -540,6 +560,7 @@
 			files = (
 				7B0F3A3320D362A9002CF340 /* LANavigationBarButton.m in Sources */,
 				7BBEF89620D899C900C2CF8B /* LAControllerFactory.m in Sources */,
+				7B0F71BD20DCF57F00C91292 /* LANetworkError.m in Sources */,
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */,
 				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
@@ -554,6 +575,7 @@
 				7B0F3A2520D23C3C002CF340 /* ViewController3.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
 				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
+				7B0F71BA20DC9B9400C91292 /* LANetworkConfig.m in Sources */,
 				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
 				7B0F3A3D20D36359002CF340 /* LANavigationBar.m in Sources */,
 				7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */,
@@ -576,6 +598,8 @@
 				7B26840E20CE756B00FE9A60 /* LATableViewCellItem.m in Sources */,
 				7B26841E20CE808300FE9A60 /* LATableHeightCache.m in Sources */,
 				7B26841120CE784D00FE9A60 /* LATableViewCellContext.m in Sources */,
+				7B0F71AE20DC9A1E00C91292 /* LANetworkManager.m in Sources */,
+				7B0F71B420DC9B2800C91292 /* LANetworkBaseApi.m in Sources */,
 				7B2683C120C8D99300FE9A60 /* Foundation+LACoreLib.m in Sources */,
 				7B0F3A0B20D23ABD002CF340 /* PRootViewController.m in Sources */,
 				7B26842820CF5FD600FE9A60 /* LABaseViewController.m in Sources */,

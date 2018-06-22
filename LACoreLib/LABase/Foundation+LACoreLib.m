@@ -7,7 +7,7 @@
 //
 
 #import "Foundation+LACoreLib.h"
-
+#import <CommonCrypto/CommonDigest.h>
 #import "LADefaultValue.h"
 
 
@@ -155,7 +155,7 @@
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
 
-- (NSString*)la_encodingWithUTF8
+- (NSString *)la_encodingWithUTF8
 {
     return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
@@ -177,8 +177,39 @@
     return size;
 }
 
+- (NSString *)la_md5
+{
+    const char* input = [self UTF8String];
+    unsigned char result[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(input, (CC_LONG)strlen(input), result);
+    
+    NSMutableString *digest = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
+    for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+    {
+        [digest appendFormat:@"%02x", result[i]];
+    }
+    
+    return digest;
+}
 
-
+- (NSDictionary *)la_toDictionary
+{
+    if (self.length == 0) {
+        return nil;
+    }
+    NSError *error;
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    
+    id object = [NSJSONSerialization JSONObjectWithData:data
+                                                options:NSJSONReadingMutableContainers
+                                                  error:&error];
+    if (error)
+    {
+        LACoreLibWarn(@"(la_toDictionary) %@", [error localizedDescription]);
+    }
+    
+    return object;
+}
 
 @end
 
