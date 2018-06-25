@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 
+@property (nonatomic, assign) LANetworkStatus status;
+
 @end
 
 
@@ -24,9 +26,27 @@
 LA_SINGLE_IMP
 
 
-- (LANetworkStatus)status
+- (instancetype)init
 {
-    return (LANetworkStatus)([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus);
+    if(self = [super init])
+    {
+        [self startMonitoring];
+        
+        self.status = LANetworkStatusUnknown;
+        
+        LA_WS(ws);
+        [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+            
+            ws.status = (LANetworkStatus)status;
+            
+            ws.blockStatusChange ?
+            ws.blockStatusChange((LANetworkStatus)status) :
+            nil;
+            
+        }];
+    }
+    
+    return self;
 }
 
 - (BOOL)isAvailable
@@ -258,13 +278,32 @@ LA_SINGLE_IMP
 #pragma mark - Helper
 - (NSString *)buildUrl:(LANetworkBaseApi *)api
 {
-    NSString *baseUrl = api.baseUrl;
     NSString *requestUrl = api.requestUrl;
     
     if([requestUrl la_isBeginsWith:@"http"] || [requestUrl la_isBeginsWith:@"https"])
     {
         return requestUrl;
     }
+    
+    
+    NSString *baseUrl;
+    if(self.serverType == LANetworkServerTypeDev)
+    {
+        baseUrl = api.baseDevUrl;
+    }
+    else if(self.serverType == LANetworkServerTypeTest)
+    {
+        baseUrl = api.baseTestUrl;
+    }
+    else if(self.serverType == LANetworkServerTypePre)
+    {
+        baseUrl = api.basePreUrl;
+    }
+    else if(self.serverType == LANetworkServerTypePro)
+    {
+        baseUrl = api.baseProUrl;
+    }
+    
     
     return [NSString stringWithFormat:@"%@%@", baseUrl, requestUrl];
 }
@@ -311,17 +350,20 @@ LA_SINGLE_IMP
     
     
 
-    if([api checkRespCode])
+    if([api checkRetCodeIsSuccess])
     {
-#warning nil -> response
         api.blockSuccess ?
-        api.blockSuccess(api, nil) :
+        api.blockSuccess(api, respDict) :
         nil;
     }
     else
     {
+        NSInteger retCode = [api getRetCode];
+        NSString *retMsg = [api getRetMsg];
+        
         LANetworkError *error = [LANetworkError errorWithUrl:[self buildUrl:api]
-                                                        type:LANetworkErrorTypeCodeFail];
+                                                        code:retCode
+                                                         msg:retMsg];
         api.blockFail ?
         api.blockFail(api, error) :
         nil;
@@ -362,9 +404,5 @@ LA_SINGLE_IMP
 }
 
 
-- (void)dealloc
-{
-    LALog(@"dealloc-%@", NSStringFromClass([self class]));
-}
 
 @end

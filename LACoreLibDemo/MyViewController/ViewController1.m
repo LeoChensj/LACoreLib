@@ -10,6 +10,9 @@
 
 #import "LANavigator.h"
 
+#import "LANetwork.h"
+
+
 
 @interface ViewController1 ()
 
@@ -25,10 +28,14 @@
     self.navigationItem.title = @"Leo";
 }
 
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    [LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
-//}
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    //[LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
+    
+    NSInteger asd = [LANetworkManager shareInstance].status;
+    
+    NSLog(@"asd=%li", asd);
+}
 
 
 - (void)didReceiveMemoryWarning

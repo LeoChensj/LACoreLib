@@ -35,8 +35,8 @@ typedef NS_ENUM(NSInteger , LAResponseSerializerType) {
 
 #pragma mark - Callback Block Define
 @class LANetworkBaseApi;
-typedef void (^LANetworkBaseApiSuccessBlock)(__kindof LANetworkBaseApi *api, __kindof NSObject *responseData);
-typedef void (^LANetworkBaseApiFailBlock)(__kindof LANetworkBaseApi *api, LANetworkError *error);
+typedef void (^LANetworkBaseApiSuccessBlock)(LANetworkBaseApi *api, NSObject *responseData);
+typedef void (^LANetworkBaseApiFailBlock)(LANetworkBaseApi *api, LANetworkError *error);
 
 
 
@@ -45,16 +45,20 @@ typedef void (^LANetworkBaseApiFailBlock)(__kindof LANetworkBaseApi *api, LANetw
 
 @interface LANetworkBaseApi : NSObject
 
-
 /*
  requestTask
  */
 @property (nonatomic, strong, readonly) NSURLSessionDataTask *requestTask;
 
+
 /*
  url
  */
-@property (nonatomic, strong, readonly) NSString *baseUrl;
+@property (nonatomic, strong, readonly) NSString *baseDevUrl;
+@property (nonatomic, strong, readonly) NSString *baseTestUrl;
+@property (nonatomic, strong, readonly) NSString *basePreUrl;
+@property (nonatomic, strong, readonly) NSString *baseProUrl;
+
 @property (nonatomic, strong, readonly) NSString *requestUrl;
 
 /*
@@ -109,30 +113,102 @@ typedef void (^LANetworkBaseApiFailBlock)(__kindof LANetworkBaseApi *api, LANetw
 
 
 #pragma mark - Config
-- (NSString *)configBaseUrl;
+/*
+ 基础开发url
+ */
+- (NSString *)configBaseDevUrl;
 
+/*
+ 基础测试url
+ */
+- (NSString *)configBaseTestUrl;
+
+/*
+ 基础预发布url
+ */
+- (NSString *)configBasePreUrl;
+
+/*
+ 基础生产url
+ */
+- (NSString *)configBaseProUrl;
+
+/*
+ url后缀，或者整个url
+ */
 - (NSString *)configRequestUrl;
 
+/*
+ 配置超时时间
+ 默认:60s
+ */
 - (NSTimeInterval)configRequestTimeoutInterval;
 
+/*
+ 配置请求头
+ */
 - (NSDictionary *)configRequestHeaders;
 
-- (NSDictionary *)configRequestParam;
-
+/*
+ 配置请求方法
+ 默认:Get
+ */
 - (LARequestMethod)configRequestMethod;
 
+/*
+ 配置请求参数
+ */
+- (NSDictionary *)configRequestParam;
+
+/*
+ 配置请求数据格式
+ 默认:HTTP
+ */
 - (LARequestSerializerType)configRequestSerializerType;
 
+/*
+ 配置响应数据格式
+ 默认:HTTP
+ */
 - (LAResponseSerializerType)configResponseSerializerType;
 
+/*
+ 配置业务返回码对应的key
+ 默认:code
+ */
+- (NSString *)configKeyForCode;
+
+/*
+ 配置业务返回msg对应的key
+ 默认:msg
+ */
+- (NSString *)configKeyForMsg;
+
+/*
+ 配置返回码成功条件
+ 默认:返回码等于0表示业务成功
+ */
+- (BOOL)configRetCodeSuccessCondition;
 
 
+
+
+
+#pragma mark - Helper
 /*
  检查respCode，返回是否业务成功
  */
-- (BOOL)checkRespCode;
+- (BOOL)checkRetCodeIsSuccess;
 
+/*
+ 获取接口返回码
+ */
+- (NSInteger)getRetCode;
 
+/*
+ 获取接口返回msg
+ */
+- (NSString *)getRetMsg;
 
 
 

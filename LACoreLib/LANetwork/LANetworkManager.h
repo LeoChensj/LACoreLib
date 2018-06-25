@@ -18,17 +18,32 @@ typedef NS_ENUM(NSInteger, LANetworkStatus) {
     LANetworkStatusReachableViaWiFi = 2,
 };
 
+typedef NS_ENUM(NSInteger, LANetworkServerType) {
+    LANetworkServerTypeDev = 0,     //开发服务器
+    LANetworkServerTypeTest,        //测试服务器
+    LANetworkServerTypePre,         //预发布服务器
+    LANetworkServerTypePro          //生产服务器
+};
 
+
+
+
+
+typedef void(^LANetworkManagerStatusChangeBlock)(LANetworkStatus status);
 
 @interface LANetworkManager : NSObject
 
 LA_SINGLE_DEF
 
+@property (nonatomic, assign) LANetworkServerType serverType;
 
 @property (nonatomic, assign, readonly) LANetworkStatus status;
+
 @property (nonatomic, assign, readonly) BOOL isAvailable;
 @property (nonatomic, assign, readonly) BOOL isWWAN;
 @property (nonatomic, assign, readonly) BOOL isWiFi;
+
+@property (nonatomic, strong)LANetworkManagerStatusChangeBlock blockStatusChange;
 
 
 - (void)startMonitoring;

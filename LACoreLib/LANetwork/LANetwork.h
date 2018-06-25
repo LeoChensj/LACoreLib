@@ -9,9 +9,8 @@
 #ifndef LANetwork_h
 #define LANetwork_h
 
-#import "LANetworkManager.h"
 #import "LANetworkBaseApi.h"
-#import "LANetworkConfig.h"
+#import "LANetworkManager.h"
 #import "LANetworkError.h"
 
 

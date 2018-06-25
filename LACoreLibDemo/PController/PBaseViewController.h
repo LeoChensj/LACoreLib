@@ -7,6 +7,7 @@
 //
 
 #import "LABaseViewController.h"
+#import "LABaseViewController+LAHelper.h"
 
 @interface PBaseViewController : LABaseViewController
 

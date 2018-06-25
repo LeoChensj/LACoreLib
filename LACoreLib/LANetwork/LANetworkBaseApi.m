@@ -12,17 +12,20 @@
 
 @interface LANetworkBaseApi ()
 
-@property (nonatomic, strong, readwrite) NSString *baseUrl;
-@property (nonatomic, strong, readwrite) NSString *requestUrl;
-@property (nonatomic, assign, readwrite) NSTimeInterval requestTimeoutInterval;
-@property (nonatomic, strong, readwrite) NSDictionary *requestHeaders;
-@property (nonatomic, strong, readwrite) NSDictionary *requestParam;
-@property (nonatomic, assign, readwrite) LARequestMethod requestMethod;
-@property (nonatomic, assign, readwrite) LARequestSerializerType requestSerializerType;
-@property (nonatomic, assign, readwrite) LAResponseSerializerType responseSerializerType;
-@property (nonatomic, strong, readwrite) NSString *response;
-@property (nonatomic, strong, readwrite) LANetworkBaseApiSuccessBlock blockSuccess;
-@property (nonatomic, strong, readwrite) LANetworkBaseApiFailBlock blockFail;
+@property (nonatomic, strong) NSString *baseDevUrl;
+@property (nonatomic, strong) NSString *baseTestUrl;
+@property (nonatomic, strong) NSString *basePreUrl;
+@property (nonatomic, strong) NSString *baseProUrl;
+@property (nonatomic, strong) NSString *requestUrl;
+@property (nonatomic, assign) NSTimeInterval requestTimeoutInterval;
+@property (nonatomic, strong) NSDictionary *requestHeaders;
+@property (nonatomic, strong) NSDictionary *requestParam;
+@property (nonatomic, assign) LARequestMethod requestMethod;
+@property (nonatomic, assign) LARequestSerializerType requestSerializerType;
+@property (nonatomic, assign) LAResponseSerializerType responseSerializerType;
+@property (nonatomic, strong) NSString *response;
+@property (nonatomic, strong) LANetworkBaseApiSuccessBlock blockSuccess;
+@property (nonatomic, strong) LANetworkBaseApiFailBlock blockFail;
 
 @end
 
@@ -35,12 +38,15 @@
 {
     if(self = [super init])
     {
-        self.baseUrl = [self configBaseUrl];
+        self.baseDevUrl = [self configBaseDevUrl];
+        self.baseTestUrl = [self configBaseTestUrl];
+        self.basePreUrl = [self configBasePreUrl];
+        self.baseProUrl = [self configBaseProUrl];
         self.requestUrl = [self configRequestUrl];
         self.requestTimeoutInterval = [self configRequestTimeoutInterval];
         self.requestHeaders = [self configRequestHeaders];
-        self.requestParam = [self configRequestParam];
         self.requestMethod = [self configRequestMethod];
+        self.requestParam = [self configRequestParam];
         self.requestSerializerType = [self configRequestSerializerType];
         self.responseSerializerType = [self configResponseSerializerType];
     }
@@ -50,9 +56,22 @@
 
 
 
+- (NSString *)configBaseDevUrl
+{
+    return nil;
+}
 
+- (NSString *)configBaseTestUrl
+{
+    return nil;
+}
 
-- (NSString *)configBaseUrl
+- (NSString *)configBasePreUrl
+{
+    return nil;
+}
+
+- (NSString *)configBaseProUrl
 {
     return nil;
 }
@@ -72,14 +91,14 @@
     return nil;
 }
 
-- (NSDictionary *)configRequestParam
-{
-    return nil;
-}
-
 - (LARequestMethod)configRequestMethod
 {
     return LARequestMethodGet;
+}
+
+- (NSDictionary *)configRequestParam
+{
+    return nil;
 }
 
 - (LARequestSerializerType)configRequestSerializerType
@@ -92,10 +111,50 @@
     return LAResponseSerializerTypeHTTP;
 }
 
-
-- (BOOL)checkRespCode
+- (NSString *)configKeyForCode
 {
-    return YES;
+    return @"code";
+}
+
+- (NSString *)configKeyForMsg
+{
+    return @"msg";
+}
+
+- (BOOL)configRetCodeSuccessCondition
+{
+    return ([self getRetCode] == 0);
+}
+
+
+
+
+
+- (BOOL)checkRetCodeIsSuccess
+{
+    return [self configRetCodeSuccessCondition];
+}
+
+- (NSInteger)getRetCode
+{
+    if(self.responseDict)
+    {
+        NSNumber *retCode = [self.responseDict objectForKey:[self configKeyForCode]];
+        
+        return retCode.integerValue;
+    }
+    
+    return LANetworkErrorTypeUnknown;
+}
+
+- (NSString *)getRetMsg
+{
+    if(self.responseDict)
+    {
+        return [self.responseDict objectForKey:[self configKeyForMsg]];
+    }
+    
+    return nil;
 }
 
 
@@ -121,5 +180,11 @@
     [[LANetworkManager shareInstance] cancelRequest:self];
 }
 
+
+
+- (void)dealloc
+{
+    LALog(@"dealloc-%@", NSStringFromClass([self class]));
+}
 
 @end

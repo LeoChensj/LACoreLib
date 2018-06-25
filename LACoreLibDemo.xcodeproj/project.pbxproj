@@ -25,7 +25,6 @@
 		7B0F717320DA329600C91292 /* LAFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F717220DA329600C91292 /* LAFlowLayout.m */; };
 		7B0F71AE20DC9A1E00C91292 /* LANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */; };
 		7B0F71B420DC9B2800C91292 /* LANetworkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */; };
-		7B0F71BA20DC9B9400C91292 /* LANetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */; };
 		7B0F71BD20DCF57F00C91292 /* LANetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71BC20DCF57F00C91292 /* LANetworkError.m */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
@@ -48,7 +47,8 @@
 		7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26842B20CF9E5A00FE9A60 /* LALoadingView.m */; };
 		7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843420CFC69200FE9A60 /* LAErrorView.m */; };
 		7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */; };
-		7BBEF89320D8988500C2CF8B /* LARouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89220D8988500C2CF8B /* LARouter.m */; };
+		7B5E4F1F20E0880600031F39 /* PNetworkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */; };
+		7B5E4F2220E094CA00031F39 /* TestNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */; };
 		7BBEF89620D899C900C2CF8B /* LAControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */; };
 		7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89820D8D45700C2CF8B /* LANavigator.m */; };
 		7BBEF89F20D8E9A400C2CF8B /* MyControllerRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89E20D8E9A400C2CF8B /* MyControllerRegister.m */; };
@@ -109,8 +109,6 @@
 		7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkManager.m; sourceTree = "<group>"; };
 		7B0F71B220DC9B2800C91292 /* LANetworkBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkBaseApi.h; sourceTree = "<group>"; };
 		7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkBaseApi.m; sourceTree = "<group>"; };
-		7B0F71B820DC9B9400C91292 /* LANetworkConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkConfig.h; sourceTree = "<group>"; };
-		7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkConfig.m; sourceTree = "<group>"; };
 		7B0F71BB20DCF57F00C91292 /* LANetworkError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkError.h; sourceTree = "<group>"; };
 		7B0F71BC20DCF57F00C91292 /* LANetworkError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkError.m; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,8 +160,10 @@
 		7B26843420CFC69200FE9A60 /* LAErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAErrorView.m; sourceTree = "<group>"; };
 		7B26843620CFCCFF00FE9A60 /* LABaseViewController+LAHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LABaseViewController+LAHelper.h"; sourceTree = "<group>"; };
 		7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LABaseViewController+LAHelper.m"; sourceTree = "<group>"; };
-		7BBEF89120D8988500C2CF8B /* LARouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LARouter.h; sourceTree = "<group>"; };
-		7BBEF89220D8988500C2CF8B /* LARouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LARouter.m; sourceTree = "<group>"; };
+		7B5E4F1D20E0880600031F39 /* PNetworkBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetworkBaseApi.h; sourceTree = "<group>"; };
+		7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetworkBaseApi.m; sourceTree = "<group>"; };
+		7B5E4F2020E094CA00031F39 /* TestNetworkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNetworkApi.h; sourceTree = "<group>"; };
+		7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNetworkApi.m; sourceTree = "<group>"; };
 		7BBEF89420D899C900C2CF8B /* LAControllerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAControllerFactory.h; sourceTree = "<group>"; };
 		7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAControllerFactory.m; sourceTree = "<group>"; };
 		7BBEF89720D8D45700C2CF8B /* LANavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigator.h; sourceTree = "<group>"; };
@@ -300,6 +300,7 @@
 		7B26832920C68D5200FE9A60 /* LACoreLibDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7B5E4F1C20E087E700031F39 /* Api */,
 				7B0F716C20D9ECCC00C91292 /* View */,
 				7B0F3A0820D23A91002CF340 /* PController */,
 				7B0F3A1B20D23C0F002CF340 /* MyViewController */,
@@ -346,12 +347,10 @@
 			isa = PBXGroup;
 			children = (
 				7B2683FA20CE4A8C00FE9A60 /* LANetwork.h */,
-				7B0F71AC20DC9A1E00C91292 /* LANetworkManager.h */,
-				7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */,
 				7B0F71B220DC9B2800C91292 /* LANetworkBaseApi.h */,
 				7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */,
-				7B0F71B820DC9B9400C91292 /* LANetworkConfig.h */,
-				7B0F71B920DC9B9400C91292 /* LANetworkConfig.m */,
+				7B0F71AC20DC9A1E00C91292 /* LANetworkManager.h */,
+				7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */,
 				7B0F71BB20DCF57F00C91292 /* LANetworkError.h */,
 				7B0F71BC20DCF57F00C91292 /* LANetworkError.m */,
 			);
@@ -424,10 +423,19 @@
 				7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */,
 				7BBEF89720D8D45700C2CF8B /* LANavigator.h */,
 				7BBEF89820D8D45700C2CF8B /* LANavigator.m */,
-				7BBEF89120D8988500C2CF8B /* LARouter.h */,
-				7BBEF89220D8988500C2CF8B /* LARouter.m */,
 			);
 			path = LAController;
+			sourceTree = "<group>";
+		};
+		7B5E4F1C20E087E700031F39 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7B5E4F1D20E0880600031F39 /* PNetworkBaseApi.h */,
+				7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */,
+				7B5E4F2020E094CA00031F39 /* TestNetworkApi.h */,
+				7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 		F93BEBEB7B79E5546537B6BA /* Frameworks */ = {
@@ -564,9 +572,10 @@
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */,
 				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
+				7B5E4F2220E094CA00031F39 /* TestNetworkApi.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
+				7B5E4F1F20E0880600031F39 /* PNetworkBaseApi.m in Sources */,
 				7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */,
-				7BBEF89320D8988500C2CF8B /* LARouter.m in Sources */,
 				7B26842C20CF9E5A00FE9A60 /* LALoadingView.m in Sources */,
 				7B26842020CE808300FE9A60 /* LABaseTableViewHeaderFooterView.m in Sources */,
 				7B0F3A2620D23C3C002CF340 /* ViewController1.m in Sources */,
@@ -575,7 +584,6 @@
 				7B0F3A2520D23C3C002CF340 /* ViewController3.m in Sources */,
 				7B26842120CE808300FE9A60 /* LABaseTableViewCell.m in Sources */,
 				7B26842520CF5B2D00FE9A60 /* LANavigationController.m in Sources */,
-				7B0F71BA20DC9B9400C91292 /* LANetworkConfig.m in Sources */,
 				7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */,
 				7B0F3A3D20D36359002CF340 /* LANavigationBar.m in Sources */,
 				7B0F3A2720D23C3C002CF340 /* ViewController4.m in Sources */,

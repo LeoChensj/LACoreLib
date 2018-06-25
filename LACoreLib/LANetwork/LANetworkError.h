@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger , LANetworkErrorType) {
-    LANetworkErrorTypeNoNetwork = -10000,   //无网
+    LANetworkErrorTypeUnknown = -10000,     //未知
+    LANetworkErrorTypeNoNetwork,            //无网
     LANetworkErrorTypeServerDown,           //服务器宕机
     LANetworkErrorTypeCodeFail,             //接口业务失败
     LANetworkErrorTypeDataError,            //返回数据错误

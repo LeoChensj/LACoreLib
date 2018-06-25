@@ -15,7 +15,6 @@
 #import "LABaseViewController+LAHelper.h"
 #import "LAControllerFactory.h"
 #import "LANavigator.h"
-#import "LARouter.h"
 
 
 #endif /* LAController_h */

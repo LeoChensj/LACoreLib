@@ -11,6 +11,8 @@
 #import "PNavigationController.h"
 #import "LANavigator.h"
 
+#import "TestNetworkApi.h"
+
 
 @interface TestViewController2 ()
 
@@ -35,9 +37,26 @@
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    TestViewController1 *vc = [TestViewController1 new];
+//    TestViewController1 *vc = [TestViewController1 new];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    LA_WS(ws);
+    
+    [self la_showLoadingView];
+    TestNetworkApi *api = [[TestNetworkApi alloc] init];
+    [api requestWithSuccess:^(__kindof LANetworkBaseApi *api, __kindof NSObject *responseData) {
+        
+        [ws la_hideLoadingView];
+        
+    } fail:^(__kindof LANetworkBaseApi *api, LANetworkError *error) {
+        
+        [ws la_hideLoadingView];
+        
+    }];
+    
+    
 }
 
 

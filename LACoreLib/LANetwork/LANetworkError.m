@@ -47,6 +47,11 @@
         error.code = LANetworkErrorTypeDataError;
         error.msg = @"返回数据错误";
     }
+    else
+    {
+        error.code = LANetworkErrorTypeUnknown;
+        error.msg = @"未知错误";
+    }
     
     return error;
 }
