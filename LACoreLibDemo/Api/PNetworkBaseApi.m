@@ -12,7 +12,7 @@
 
 - (NSString *)configBaseDevUrl
 {
-    return @"http://47.104.133.89:8080";
+    return @"http://127.0.0.1:8080";
 }
 
 - (NSString *)configBaseTestUrl

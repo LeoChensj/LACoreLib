@@ -45,7 +45,7 @@
     LA_WS(ws);
     
     [self la_showLoadingView];
-    TestNetworkApi *api = [[TestNetworkApi alloc] init];
+    TestNetworkApi *api = [[TestNetworkApi alloc] init_with_page:1 size:20 context:@"Leo.Chen" finish:YES];
     [api requestWithSuccess:^(__kindof LANetworkBaseApi *api, __kindof NSObject *responseData) {
         
         [ws la_hideLoadingView];

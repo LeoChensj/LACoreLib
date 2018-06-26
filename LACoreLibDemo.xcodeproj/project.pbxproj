@@ -48,7 +48,9 @@
 		7B26843520CFC69200FE9A60 /* LAErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843420CFC69200FE9A60 /* LAErrorView.m */; };
 		7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */; };
 		7B5E4F1F20E0880600031F39 /* PNetworkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */; };
-		7B5E4F2220E094CA00031F39 /* TestNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */; };
+		7B5E4F2720E1DB2C00031F39 /* api_gen.js in Resources */ = {isa = PBXBuildFile; fileRef = 7B5E4F2520E1DB2C00031F39 /* api_gen.js */; };
+		7B5E4F2820E1DB2C00031F39 /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B5E4F2620E1DB2C00031F39 /* model.json */; };
+		7B5E4F2E20E1DDC900031F39 /* TestNetworkApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E4F2C20E1DDC900031F39 /* TestNetworkApi.m */; };
 		7BBEF89620D899C900C2CF8B /* LAControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */; };
 		7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89820D8D45700C2CF8B /* LANavigator.m */; };
 		7BBEF89F20D8E9A400C2CF8B /* MyControllerRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBEF89E20D8E9A400C2CF8B /* MyControllerRegister.m */; };
@@ -162,8 +164,10 @@
 		7B26843720CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LABaseViewController+LAHelper.m"; sourceTree = "<group>"; };
 		7B5E4F1D20E0880600031F39 /* PNetworkBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PNetworkBaseApi.h; sourceTree = "<group>"; };
 		7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PNetworkBaseApi.m; sourceTree = "<group>"; };
-		7B5E4F2020E094CA00031F39 /* TestNetworkApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNetworkApi.h; sourceTree = "<group>"; };
-		7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNetworkApi.m; sourceTree = "<group>"; };
+		7B5E4F2520E1DB2C00031F39 /* api_gen.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = api_gen.js; sourceTree = "<group>"; };
+		7B5E4F2620E1DB2C00031F39 /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
+		7B5E4F2C20E1DDC900031F39 /* TestNetworkApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNetworkApi.m; sourceTree = "<group>"; };
+		7B5E4F2D20E1DDC900031F39 /* TestNetworkApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNetworkApi.h; sourceTree = "<group>"; };
 		7BBEF89420D899C900C2CF8B /* LAControllerFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LAControllerFactory.h; sourceTree = "<group>"; };
 		7BBEF89520D899C900C2CF8B /* LAControllerFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LAControllerFactory.m; sourceTree = "<group>"; };
 		7BBEF89720D8D45700C2CF8B /* LANavigator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANavigator.h; sourceTree = "<group>"; };
@@ -283,6 +287,7 @@
 			children = (
 				7B2683BB20C8D99200FE9A60 /* LACoreLib */,
 				7B26832920C68D5200FE9A60 /* LACoreLibDemo */,
+				7B5E4F2320E1DA6500031F39 /* Tool */,
 				7B26832820C68D5200FE9A60 /* Products */,
 				4300786EBE939B163EC6F9D0 /* Pods */,
 				F93BEBEB7B79E5546537B6BA /* Frameworks */,
@@ -432,8 +437,25 @@
 			children = (
 				7B5E4F1D20E0880600031F39 /* PNetworkBaseApi.h */,
 				7B5E4F1E20E0880600031F39 /* PNetworkBaseApi.m */,
-				7B5E4F2020E094CA00031F39 /* TestNetworkApi.h */,
-				7B5E4F2120E094CA00031F39 /* TestNetworkApi.m */,
+				7B5E4F2D20E1DDC900031F39 /* TestNetworkApi.h */,
+				7B5E4F2C20E1DDC900031F39 /* TestNetworkApi.m */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		7B5E4F2320E1DA6500031F39 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				7B5E4F2420E1DA8100031F39 /* Api */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		7B5E4F2420E1DA8100031F39 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7B5E4F2520E1DB2C00031F39 /* api_gen.js */,
+				7B5E4F2620E1DB2C00031F39 /* model.json */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -506,6 +528,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5E4F2720E1DB2C00031F39 /* api_gen.js in Resources */,
+				7B5E4F2820E1DB2C00031F39 /* model.json in Resources */,
 				7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,7 +596,6 @@
 				7B26833A20C68D5600FE9A60 /* main.m in Sources */,
 				7BBEF89920D8D45700C2CF8B /* LANavigator.m in Sources */,
 				7B0F3A2F20D26CA1002CF340 /* TestViewController2.m in Sources */,
-				7B5E4F2220E094CA00031F39 /* TestNetworkApi.m in Sources */,
 				7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */,
 				7B5E4F1F20E0880600031F39 /* PNetworkBaseApi.m in Sources */,
 				7B0F3A0E20D23B01002CF340 /* PBaseViewController.m in Sources */,
@@ -599,6 +622,7 @@
 				7B0F716F20D9ECF300C91292 /* PErrorView.m in Sources */,
 				7B26841F20CE808300FE9A60 /* LABaseTableView.m in Sources */,
 				7B2683F320CA75FF00FE9A60 /* LAPathUtil.m in Sources */,
+				7B5E4F2E20E1DDC900031F39 /* TestNetworkApi.m in Sources */,
 				7B0F717320DA329600C91292 /* LAFlowLayout.m in Sources */,
 				7B26843820CFCCFF00FE9A60 /* LABaseViewController+LAHelper.m in Sources */,
 				7BBEF8A220D8F60200C2CF8B /* TestViewController3.m in Sources */,

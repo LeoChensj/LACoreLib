@@ -1,0 +1,12 @@
+{
+	"class_name": "TestNetworkApi",
+	"super_class_name": "PNetworkBaseApi",
+	"url": "/api/test/list",
+	"method": "post",
+	"param": {
+		"page": 1,
+		"size": 20,
+		"context": "Leo.Chen",
+		"finish": true
+	}
+}
