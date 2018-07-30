@@ -12,6 +12,10 @@
 
 #import "LANetwork.h"
 
+#import "LABannerView.h"
+
+#import "LAPickerView.h"
+
 
 
 @interface ViewController1 ()
@@ -26,15 +30,27 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Leo";
+    
+    //self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    
+    
+    
+//    UIDatePicker *picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 50, LA_SCREEN_WIDTH, 400)];
+//    picker.backgroundColor = [UIColor whiteColor];
+//    [picker setValue:[UIColor redColor] forKey:@"textColor"];
+//    picker.datePickerMode = UIDatePickerModeDate;
+//    [self.view addSubview:picker];
+    
+    
+    
+    
+    
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    //[LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
-    
-    NSInteger asd = [LANetworkManager shareInstance].status;
-    
-    NSLog(@"asd=%li", asd);
+    [LANavigator navigationToUrl:@"tvc1" vcInfo:nil animated:YES];
 }
 
 

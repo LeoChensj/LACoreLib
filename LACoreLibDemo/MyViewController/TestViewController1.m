@@ -8,11 +8,16 @@
 
 #import "TestViewController1.h"
 #import "LABaseViewController+LAHelper.h"
+#import "LABannerView.h"
+#import "LAPickerView.h"
 
 
 @interface TestViewController1 ()
 
-@property (nonatomic, assign)BOOL statusBarStyleFlag;
+@property (nonatomic, assign) BOOL statusBarStyleFlag;
+
+@property (nonatomic, strong) LABannerView *banner;
+@property (nonatomic, strong) LAPickerView *pickView;
 
 @end
 
@@ -25,6 +30,32 @@
     self.navigationItem.title = @"test1";
     
     self.statusBarStyleFlag = NO;
+    
+    
+    
+//    _banner = [[LABannerView alloc] initWithFrame:CGRectMake(0, 80, LA_SCREEN_WIDTH, 200)];
+//    _banner.isAutoPlay = YES;
+//    [self.view addSubview:_banner];
+//    _banner.blockTap = ^(NSUInteger index) {
+//
+//        NSLog(@"index=%lu", (unsigned long)index);
+//
+//    };
+//
+//    _banner.dataArray = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1533112919&di=6c08aebfbc62786e675ca9f91a0ce315&imgtype=jpg&er=1&src=http%3A%2F%2Fpic5.photophoto.cn%2F20071228%2F0034034901778224_b.jpg",
+//                         @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532518200125&di=1d3f6a62134af389e20fd23a1b2fdbb6&imgtype=0&src=http%3A%2F%2Fpic.qiantucdn.com%2F58pic%2F13%2F71%2F35%2F24k58PICSiB_1024.jpg",
+//                         @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1532518200125&di=931e844d8ab7be6e6f729a045493f6e4&imgtype=0&src=http%3A%2F%2Fimg1.3lian.com%2F2015%2Fa1%2F63%2Fd%2F121.jpg"];
+    
+    
+    
+    
+    _pickView = [[LAPickerView alloc] initWithType:LAPickerViewTypeNormal];
+    _pickView.textColor = [UIColor la_colorWithCSS:@"#328BEF"];
+    
+    NSArray *arr1 = @[@"阿斯顿", @"请问", @"萨芬", @"饿", @"求我"];
+    NSArray *arr2 = @[@"让他", @"会发光", @"沃尔特", @"大哥", @"儿童"];
+    NSArray *arr3 = @[@"覆盖", @"而为", @"分", @"范围", @"饭"];
+    _pickView.dataArrayNormal = @[arr1, arr2, arr3];
 }
 
 - (UIStatusBarStyle)configStatusBarStyle
@@ -48,9 +79,11 @@
 //        [self la_hideLoadingView];
 //    }
     
-    [self la_showNetworkErrorView:nil];
+    //[self la_showNetworkErrorView:nil];
     
     //[self la_showNoDataErrorView];
+    
+    [_pickView showInWindow];
 }
 
 - (void)onNetworkErrorViewReload
@@ -68,6 +101,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc
+{
+    [_banner releaseTimer];
 }
 
 @end

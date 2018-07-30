@@ -22,5 +22,7 @@
 #import "LALoadingView.h"
 #import "LAErrorView.h"
 
+#import "LABannerView.h"
+
 
 #endif /* LAUI_h */

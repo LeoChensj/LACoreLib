@@ -29,6 +29,8 @@
 
 #define LA_LineMinHeight            1.f/LA_SCREEN_SCALE
 
+#define LA_KeyWindow                [UIApplication sharedApplication].keyWindow
+
 
 
 

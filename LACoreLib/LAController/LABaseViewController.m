@@ -32,6 +32,7 @@ NSString * const LABaseViewControllerInfoKeyOnSusseccPopToController = @"LABaseV
     {
         self.hidesBottomBarWhenPushed = YES;
         self.automaticallyAdjustsScrollViewInsets = NO;
+        self.extendedLayoutIncludesOpaqueBars = YES;
     }
     
     return self;
