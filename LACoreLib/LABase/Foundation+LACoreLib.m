@@ -288,7 +288,7 @@
 
 - (id)la_objectAtIndex:(NSUInteger)index
 {
-    if(index > 0 && index < self.count)
+    if(index < self.count)
     {
         return [self objectAtIndex:index];
     }
@@ -731,7 +731,7 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
 
 - (BOOL)la_isEqualToDay:(NSDate *)date
 {
-    return self.la_day == date.la_day &&self.la_month == date.la_month && self.la_year == date.la_year;
+    return self.la_day == date.la_day && self.la_month == date.la_month && self.la_year == date.la_year;
 }
 
 - (BOOL)la_isEqualToTime:(NSDate *)date
@@ -962,24 +962,6 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

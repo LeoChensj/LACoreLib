@@ -26,6 +26,7 @@
 		7B0F71AE20DC9A1E00C91292 /* LANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71AD20DC9A1E00C91292 /* LANetworkManager.m */; };
 		7B0F71B420DC9B2800C91292 /* LANetworkBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */; };
 		7B0F71BD20DCF57F00C91292 /* LANetworkError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F71BC20DCF57F00C91292 /* LANetworkError.m */; };
+		7B2308362110398E0056C151 /* LARegion.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B2308352110398E0056C151 /* LARegion.json */; };
 		7B26832C20C68D5200FE9A60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26832B20C68D5200FE9A60 /* AppDelegate.m */; };
 		7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B26833320C68D5600FE9A60 /* Assets.xcassets */; };
 		7B26833A20C68D5600FE9A60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B26833920C68D5600FE9A60 /* main.m */; };
@@ -116,6 +117,7 @@
 		7B0F71B320DC9B2800C91292 /* LANetworkBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkBaseApi.m; sourceTree = "<group>"; };
 		7B0F71BB20DCF57F00C91292 /* LANetworkError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANetworkError.h; sourceTree = "<group>"; };
 		7B0F71BC20DCF57F00C91292 /* LANetworkError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANetworkError.m; sourceTree = "<group>"; };
+		7B2308352110398E0056C151 /* LARegion.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LARegion.json; sourceTree = "<group>"; };
 		7B26832720C68D5200FE9A60 /* LACoreLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LACoreLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B26832A20C68D5200FE9A60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7B26832B20C68D5200FE9A60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -291,6 +293,14 @@
 			path = LAFlowView;
 			sourceTree = "<group>";
 		};
+		7B230832210FFE980056C151 /* LAResource */ = {
+			isa = PBXGroup;
+			children = (
+				7B2308352110398E0056C151 /* LARegion.json */,
+			);
+			path = LAResource;
+			sourceTree = "<group>";
+		};
 		7B26831E20C68D5200FE9A60 = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +346,7 @@
 				7B2683FB20CE4E1700FE9A60 /* LAUI */,
 				7B26842220CF5AD400FE9A60 /* LAController */,
 				7B2683F920CE49FE00FE9A60 /* LANetwork */,
+				7B230832210FFE980056C151 /* LAResource */,
 			);
 			path = LACoreLib;
 			sourceTree = "<group>";
@@ -562,6 +573,7 @@
 				7B5E4F2720E1DB2C00031F39 /* api_gen.js in Resources */,
 				7B5E4F2820E1DB2C00031F39 /* model.json in Resources */,
 				7B26833420C68D5600FE9A60 /* Assets.xcassets in Resources */,
+				7B2308362110398E0056C151 /* LARegion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

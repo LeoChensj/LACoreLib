@@ -16,12 +16,20 @@ typedef NS_ENUM(NSInteger, LAPickerViewType) {
 };
 
 
+
+
+typedef void(^LAPickerViewNormalConfirmBlock)(NSArray <NSNumber *>*selectNormalIndex);
+typedef void(^LAPickerViewDateConfirmBlock)(NSDate *selectDate);
+typedef void(^LAPickerViewTimeConfirmBlock)(NSUInteger selectHour, NSUInteger selectMinute);
+typedef void(^LAPickerViewRegionConfirmBlock)(NSString *selectProvince, NSString *selectCity, NSString *selectArea);
+
+
 @interface LAPickerView : UIView
 
 #pragma mark - Config property
 /*
  类型
- 普通选择器: 可以为单列或多列选择，根据数据源区分
+ 普通选择器: 可以为单列或多列选择，根据数据源区分(dataArrayNormal)
  日期选择器: 年、月、日选择
  时间选择器: 小时、分钟选择
  地区选择器: 省、市、区选择
@@ -40,7 +48,7 @@ typedef NS_ENUM(NSInteger, LAPickerViewType) {
 
 /*
  选择器高度
- 默认: 260
+ 默认: 280
  */
 @property (nonatomic, assign) CGFloat contentHeight;
 
@@ -65,6 +73,17 @@ typedef NS_ENUM(NSInteger, LAPickerViewType) {
  */
 @property (nonatomic, strong) NSArray <NSArray <NSString *>*>*dataArrayNormal;
 
+/*
+ 普通选择的下标
+ 默认: [0, 0, ...]
+ */
+@property (nonatomic, strong) NSArray <NSNumber *>*selectNormalIndex;
+
+/*
+ 普通选择器确定按钮回调
+ */
+@property (nonatomic, strong) LAPickerViewNormalConfirmBlock blockNormalConfirm;
+
 
 /*
  日期选择器
@@ -72,15 +91,78 @@ typedef NS_ENUM(NSInteger, LAPickerViewType) {
 
 /*
  可选择的最小日期
- 默认: 0年1月1日
+ 默认: 1年1月1日
  */
 @property (nonatomic, strong) NSDate *minDate;
 
 /*
  可选择的最大日期
- 默认: 2100年12月31日
+ 默认: 3000年1月1日
  */
 @property (nonatomic, strong) NSDate *maxDate;
+
+/*
+ 选择的日期
+ 默认: 今天
+ */
+@property (nonatomic, strong) NSDate *selectDate;
+
+/*
+ 日期选择器确定按钮回调
+ */
+@property (nonatomic, strong) LAPickerViewDateConfirmBlock blockDateConfirm;
+
+
+
+/*
+ 时间选择器
+ */
+
+/*
+ 选择的小时
+ 默认: 0
+ */
+@property (nonatomic, assign) NSUInteger selectHour;
+
+/*
+ 选择的分钟
+ 默认: 0
+ */
+@property (nonatomic, assign) NSUInteger selectMinute;
+
+/*
+ 时间选择器确定按钮回调
+ */
+@property (nonatomic, strong) LAPickerViewTimeConfirmBlock blockTimeConfirm;
+
+
+
+/*
+ 地区选择器
+ */
+
+/*
+ 选择的省份
+ 默认: 北京
+ */
+@property (nonatomic, strong) NSString *selectProvince;
+
+/*
+ 选择的城市
+ 默认: 北京
+ */
+@property (nonatomic, strong) NSString *selectCity;
+
+/*
+ 选择的区
+ 默认: 东城区
+ */
+@property (nonatomic, strong) NSString *selectArea;
+
+/*
+ 地区选择器确定按钮回调
+ */
+@property (nonatomic, strong) LAPickerViewRegionConfirmBlock blockRegionConfirm;
 
 
 

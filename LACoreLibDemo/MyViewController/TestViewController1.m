@@ -19,6 +19,8 @@
 @property (nonatomic, strong) LABannerView *banner;
 @property (nonatomic, strong) LAPickerView *pickView;
 
+@property (nonatomic, strong) NSDate *today;
+
 @end
 
 @implementation TestViewController1
@@ -49,13 +51,6 @@
     
     
     
-    _pickView = [[LAPickerView alloc] initWithType:LAPickerViewTypeNormal];
-    _pickView.textColor = [UIColor la_colorWithCSS:@"#328BEF"];
-    
-    NSArray *arr1 = @[@"阿斯顿", @"请问", @"萨芬", @"饿", @"求我"];
-    NSArray *arr2 = @[@"让他", @"会发光", @"沃尔特", @"大哥", @"儿童"];
-    NSArray *arr3 = @[@"覆盖", @"而为", @"分", @"范围", @"饭"];
-    _pickView.dataArrayNormal = @[arr1, arr2, arr3];
 }
 
 - (UIStatusBarStyle)configStatusBarStyle
@@ -83,7 +78,28 @@
     
     //[self la_showNoDataErrorView];
     
-    [_pickView showInWindow];
+    
+    
+    
+    LAPickerView *pickView = [[LAPickerView alloc] initWithType:LAPickerViewTypeDate];
+    //_pickView.textColor = [UIColor la_colorWithCSS:@"#328BEF"];
+    //_pickView.textFont = [UIFont systemFontOfSize:30];
+    
+    //    NSArray *arr1 = @[@"阿斯顿", @"请问", @"萨芬", @"饿", @"求我"];
+    //    NSArray *arr2 = @[@"让他", @"会发光", @"沃尔特", @"大哥", @"儿童"];
+    //    NSArray *arr3 = @[@"覆盖", @"而为", @"分", @"范围", @"饭"];
+    //    pickView.dataArrayNormal = @[arr1, arr2, arr3];
+    //    pickView.selectNormalIndex = @[@2, @1, @3];
+    
+    pickView.minDate = [NSDate la_dateWithYear:2000 month:3 day:5];
+    pickView.maxDate = [NSDate la_dateWithYear:2020 month:6 day:18];
+    //pickView.selectDate = [NSDate la_dateWithYear:2022 month:1 day:1];
+    //    pickView.selectHour = 10;
+    //    pickView.selectMinute = 30;
+    
+    //NSDate *testDate = [NSDate la_dateWithYear:2018 month:2 day:35];
+    
+    [pickView showInWindow];
 }
 
 - (void)onNetworkErrorViewReload
