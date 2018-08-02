@@ -40,7 +40,7 @@
 - (BOOL)la_isUrl
 {
     NSString *regex =@"[a-zA-z]+://[^\\s]*";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     
     return [pred evaluateWithObject:self];
 }

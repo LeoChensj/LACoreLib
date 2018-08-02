@@ -81,7 +81,7 @@
     
     
     
-    LAPickerView *pickView = [[LAPickerView alloc] initWithType:LAPickerViewTypeDate];
+    LAPickerView *pickView = [[LAPickerView alloc] initWithType:LAPickerViewTypeRegion];
     //_pickView.textColor = [UIColor la_colorWithCSS:@"#328BEF"];
     //_pickView.textFont = [UIFont systemFontOfSize:30];
     
@@ -91,8 +91,8 @@
     //    pickView.dataArrayNormal = @[arr1, arr2, arr3];
     //    pickView.selectNormalIndex = @[@2, @1, @3];
     
-    pickView.minDate = [NSDate la_dateWithYear:2000 month:3 day:5];
-    pickView.maxDate = [NSDate la_dateWithYear:2020 month:6 day:18];
+//    pickView.minDate = [NSDate la_dateWithYear:2000 month:3 day:5];
+//    pickView.maxDate = [NSDate la_dateWithYear:2020 month:6 day:18];
     //pickView.selectDate = [NSDate la_dateWithYear:2022 month:1 day:1];
     //    pickView.selectHour = 10;
     //    pickView.selectMinute = 30;
