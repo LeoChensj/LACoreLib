@@ -694,12 +694,12 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
                       month:(NSUInteger)month
                         day:(NSUInteger)day
 {
-    NSDateComponents *components = [self dateComponentsWithYear:year
-                                                          month:month
-                                                            day:day
-                                                           hour:0
-                                                         minute:0
-                                                         second:0];
+    NSDateComponents *components = [self la_dateComponentsWithYear:year
+                                                             month:month
+                                                               day:day
+                                                              hour:0
+                                                            minute:0
+                                                            second:0];
     
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
@@ -711,12 +711,12 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
                      minute:(NSUInteger)minute
                      second:(NSUInteger)second
 {
-    NSDateComponents *components = [self dateComponentsWithYear:year
-                                                          month:month
-                                                            day:day
-                                                           hour:hour
-                                                         minute:minute
-                                                         second:second];
+    NSDateComponents *components = [self la_dateComponentsWithYear:year
+                                                             month:month
+                                                               day:day
+                                                              hour:hour
+                                                            minute:minute
+                                                            second:second];
     
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
@@ -897,12 +897,12 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
 
 
 #pragma mark - Private
-+ (NSDateComponents *)dateComponentsWithYear:(NSUInteger)year
-                                       month:(NSUInteger)month
-                                         day:(NSUInteger)day
-                                        hour:(NSUInteger)hour
-                                      minute:(NSUInteger)minute
-                                      second:(NSUInteger)second
++ (NSDateComponents *)la_dateComponentsWithYear:(NSUInteger)year
+                                          month:(NSUInteger)month
+                                            day:(NSUInteger)day
+                                           hour:(NSUInteger)hour
+                                         minute:(NSUInteger)minute
+                                         second:(NSUInteger)second
 {
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.year = year;
