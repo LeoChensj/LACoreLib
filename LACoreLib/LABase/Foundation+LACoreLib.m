@@ -838,9 +838,9 @@ NSString * const kLADateFormatWeekStringLong = @"cccc";
     return [[NSCalendar currentCalendar] dateFromComponents:components];
 }
 
-- (NSDate *)dateBySettingHour:(NSUInteger)hour
-                       minute:(NSUInteger)minute
-                       second:(NSUInteger)second
+- (NSDate *)la_dateBySettingHour:(NSUInteger)hour
+                          minute:(NSUInteger)minute
+                          second:(NSUInteger)second
 {
     NSDateComponents *components = [self la_dateComponentsDateTime];
     components.hour = hour;

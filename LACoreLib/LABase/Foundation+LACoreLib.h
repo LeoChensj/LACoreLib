@@ -276,9 +276,9 @@ LA_EXTERN NSString * const kLADateFormatWeekStringLong;
 - (NSDate *)la_dateBySettingHour:(NSUInteger)hour;
 - (NSDate *)la_dateBySettingMinute:(NSUInteger)minute;
 - (NSDate *)la_dateBySettingSecond:(NSUInteger)second;
-- (NSDate *)dateBySettingHour:(NSUInteger)hour
-                       minute:(NSUInteger)minute
-                       second:(NSUInteger)second;
+- (NSDate *)la_dateBySettingHour:(NSUInteger)hour
+                          minute:(NSUInteger)minute
+                          second:(NSUInteger)second;
 
 - (NSDate *)la_dateByAddingHour:(NSUInteger)hour;
 - (NSDate *)la_dateByAddingMinute:(NSUInteger)minute;
